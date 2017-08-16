@@ -1,1 +1,37 @@
-/*Main css file*/
+/* Main css file */
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 24px;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #a61b1b;
+}
+
+.nav-last {
+  margin-right: 40px;
+}
