@@ -169,3 +169,66 @@ a.group-item-title {
     text-decoration: none;
     text-shadow: 2px 2px 4px black;
 }
+
+/*            */
+
+.recent-posts {
+    width:100%;
+    padding:20px;
+    border-style:groove;
+    border-radius: 5px;
+    border-width: 2px;
+    height:400px;
+    overflow: hidden;
+}
+
+.recent-posts .scroll-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 300px;
+    padding:10px;
+    border-style: solid;
+}
+
+
+.important {
+    font-size: 24px;
+    color:red;
+    font-weight: 700px;
+}
+
+.recent-posts .post {
+    display:block;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.recent-posts .post a{
+    text-decoration: none;
+    color:red;
+}
+
+.recent-posts .post a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+.recent-posts .post .title {
+    font-size:20px;
+}
+
+
+/* Holy shit this part took so long because I forgot the "px" at the end of max-width:1250px */
+
+@media screen and (min-width:1251px) {
+    .recent-posts .scroll-container {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .recent-posts .scroll-container {
+        height:260px;
+    }
+}
