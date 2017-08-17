@@ -8,11 +8,11 @@
 
 body {
   background-color: #fff;
-  font-family: monospace;
+  font-family: Helvetica;
 }
 
-.title {
-  font-family: 'Lobster', cursive; /* h1 */
+.title /* h1 */ {
+  font-family: 'Lobster', cursive;
 }
 
 a:hover {
@@ -59,8 +59,9 @@ a:hover {
   padding: 0 20px;
   color: white;
   line-height: 60px;
-  font-size: 1.2em;
+  font-size: 1em;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .main-nav li:hover a {
@@ -86,15 +87,15 @@ a:hover {
 .main-heading h1 {
   color: white;
   text-shadow: 2px 2px 3px red;
-  font-size: 5em;
+  font-size: 7em;
   font-family: 'Lobster', cursive;
 }
 
 .main-heading p {
   color: white;
-  font-size: 1.8em;
+  font-size: 2em;
   padding: 15px 0 35px 0;
-  font-family: monospace;
+  font-family: 'Lobster', cursive;
 }
 
 .main-heading a {
@@ -106,6 +107,7 @@ a:hover {
   text-shadow: 1px 1px 10px #f3f3f3;
   text-decoration: none;
   font-family: 'Lobster', cursive;
+  font-size: 1.2em;
 }
 
 .main-heading a:hover {
