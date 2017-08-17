@@ -13,6 +13,7 @@ body {
 
 a:hover {
   color: red;
+    text-decoration: none;
 }
 
 /* Header & Navigation */
@@ -54,10 +55,12 @@ a:hover {
   color: white;
   line-height: 60px;
   font-size: 1.2em;
+    text-decoration: none;
 }
 
 .main-nav li:hover a {
   color: red;
+    text-decoration: none;
 }
 
 /* Splash & Main Heading */
@@ -92,10 +95,12 @@ a:hover {
   border: 1px solid red;
   border-radius: 5px;
   padding: 10px 20px;
+    text-decoration: none;
 }
 
 .main-heading a {
 text-shadow: 1px 1px 10px #f3f3f3;
+    text-decoration: none;
 }
 
 .main-heading a:hover {
@@ -196,5 +201,6 @@ text-shadow: 1px 1px 10px #f3f3f3;
 .main-footer a {
   color: red;
   display: inline-block;
+    text-decoration: none;
   margin-bottom: 10px;
 }
