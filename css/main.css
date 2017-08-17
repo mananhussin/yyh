@@ -1,41 +1,4 @@
-/* xDest SPLASH STYLES
-img.fill {
-    width: 100%;
-    height:100%;
-}
-
-div.navbar {
-    height:150px;
-}
-
-.splash-title {
-    text-align: center;
-    padding:100px;
-    font-size: 96px;
-}
-
-.splash-text {
-    text-align: center;
-    font-size: 64px;
-    padding:100px;
-}
-
-.splash {
-    width: 100%;
-    padding: 0;
-    background-color: darkgray;
-    background-image: url("https://www.owfire.com/images/maps/dorado-5.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    border-color:red;
-    border-style: solid;
-    border-radius: 0;
-    border-width: 2px 0px 2px 0px;
-    min-height: 500px;
-    overflow:hidden;
-    color:white;
-} */
-/* Main css file */
+/* Main Css File */
 
 /* General */
 * {
@@ -43,78 +6,201 @@ div.navbar {
   padding: 0;
 }
 
-/* Navigation */
-.container-nav {
-  background-color: #333;
-  height: 76px;
+body {
+  background-color: #fff;
+  font-family: monospace;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  list-style-type: none;
+.title {
+  font-family: 'Lobster', cursive; /* h1 */
 }
 
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 24px;
-  margin: 15px 0;
+a:hover {
+  color: red;
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: #a61b1b;
+/* Header & Navigation */
+.main-header {
+  width: 100%;
+  background-color: #202020;
+  border-bottom: 2px groove red;
 }
 
-.tittle {
-  margin: 20px 0px 20px 40px;
-  float: left;
-  color: white;
-}
-
-.nav-last {
-  margin-right: 40px;
-}
-
-.clearfix::after {
+.main-header::after {
   content: "";
-  display: table;
   clear: both;
-}
-
-/* Splash */
-img.splash {
-  width: 100%;
-  height: 725px;
   display: block;
+}
+
+.header-container {
+  width: 90%;
   margin: 0 auto;
-  clear: both;
-  filter: blur(4px);
 }
 
-
-
-
-.image { 
-  position: relative; 
-  width: 100%;
-  background-color: #871212;
-}
-
-h2 { 
-  position: absolute; 
-  top: 275px; 
-  left: 650px; 
+.logo {
   color: white;
-  font-size: 4em;
-  text-shadow: 5px 5px 5px black;
+  float: left;
+  font-size: 2em;
+  line-height: 60px;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+}
+
+.main-nav {
+  float: right;
+}
+
+.main-nav ul li {
+  display: inline-block;
+}
+
+.main-nav ul li a {
+  padding: 0 20px;
+  color: white;
+  line-height: 60px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.main-nav li:hover a {
+  color: red;
+  text-decoration: none;
+}
+
+/* Splash & Main Heading */
+.main-heading {
+  background-image: url('../img/splash.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  border-bottom: 3px groove red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.main-heading h1 {
+  color: white;
+  text-shadow: 2px 2px 3px red;
+  font-size: 5em;
+  font-family: 'Lobster', cursive;
+}
+
+.main-heading p {
+  color: white;
+  font-size: 1.8em;
+  padding: 15px 0 35px 0;
+  font-family: monospace;
+}
+
+.main-heading a {
+  color: white;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px #f3f3f3;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+}
+
+.main-heading a:hover {
+  color: red;
+}
+
+/* Main Content */
+.main-content {
+  width: 95%;
+  margin: 45px auto;
+  padding: 35px 15px;
+  background-color: #202020;
+  border: 2px groove red;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.mc-column1, .mc-column2, .mc-column3 {
+  display: inline-block;
+  width: 30%;
+  padding: 0 15px;
+}
+
+.icon1, .icon2, .icon3 {
+  padding-bottom: 25px;
+}
+
+.main-content h1 {
+  padding-bottom: 15px;
+  color: white;
+  text-shadow: 1px 1px 2px red;
+}
+
+/* Secondary Content */
+.secondary-content {
+  width: 95%;
+  height: 250px;
+  margin: 45px auto;
+  padding: 15px;
+  background-color: #202020;
+  border: 2px groove red;
+  border-radius: 15px;
+  color: white;
+  background-image: url("../img/zed.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.sc-column1 {
+  float: left;
+  display: inline-block;
+  width: 200px;
+}
+
+.sc-column2 {
+  float: left;
+  display: inline-block;
+  width: 200px;
+}
+
+.sc-column3 {
+  float: left;
+  display: inline-block;
+  width: 200px;
+}
+
+.secondary-content h1 {
+  margin: 15px;
+  text-shadow: 1px 1px 2px red;
+}
+
+.secondary-content ul {
+  padding-left: 50px;
+}
+
+.secondary-content li {
+  padding-top: 5px;
+}
+
+/* Footer */
+.main-footer {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background-color: #202020;
+  border-top: 2px groove red;
+}
+
+.main-footer p {
+  color: white;
+  margin: 10px;
+  font-style: italic;
 }
 
 /* Forum styles */
@@ -231,4 +317,11 @@ a.group-item-title {
     .recent-posts .scroll-container {
         height:260px;
     }
+}
+
+.main-footer a {
+  color: red;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
