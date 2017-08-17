@@ -1,8 +1,10 @@
 /* Forum styles */
 
 .forum-group {
-    background-color:#e0e0e0;
-    border-style: hidden;
+    background-color:#202020;
+    border-style: solid;
+    border-width: 2px;
+    border-color:red;
     border-radius: 10px;
     color:black;
     font-size:18px;
@@ -11,9 +13,11 @@
 
 .forum-group .group-head {
     width:100%;
+    font-family: 'Lobster',cursive;
     border-radius: 10px;
-    box-shadow: 0px 4px 1px white;
-    background-color:red;
+    box-shadow: 0px 4px 1px red;
+    text-shadow: 2px 2px 4px red;
+    background-color:#202020;
     color:white;
     font-size:32px;
     padding: 10px 0px 10px 25px;
@@ -23,6 +27,7 @@
     border-bottom-width: 1px;
     border-bottom-color: black;
     border-bottom-style: solid;
+    color:white;
     border-radius: 0;
     padding-left: 25px;
 }
@@ -39,7 +44,7 @@ a.group-item-title {
 }
 
 .forum-group a {
-    color:red;
+    color:white;
     font-weight: 600;
     transition: 250ms;
 }
@@ -48,18 +53,23 @@ a.group-item-title {
     transition: 250ms;
     font-size: 28px;
     text-decoration: none;
-    text-shadow: 2px 2px 4px black;
+    color: red;
+    text-shadow: 1px 1px 4px white;
 }
 
 /*            */
 
 .recent-posts {
     width:100%;
+    margin-top:10px;
     padding:20px;
     border-style:groove;
     border-radius: 5px;
     border-width: 2px;
+    border-color:red;
+    background-color: #202020;
     height:400px;
+    color: white;
     overflow: hidden;
 }
 
@@ -68,31 +78,33 @@ a.group-item-title {
     overflow-y: scroll;
     height: 300px;
     padding:10px;
-    border-style: solid;
+    border-style: hidden;
 }
 
 
 .important {
     font-size: 24px;
-    color:red;
+    color:white;
+    font-family: 'Lobster',cursive;
+    text-shadow: 2px 2px 4px red;
     font-weight: 700px;
 }
 
 .recent-posts .post {
     display:block;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     padding-bottom: 5px;
     padding-top: 5px;
 }
 
 .recent-posts .post a{
     text-decoration: none;
-    color:red;
+    color:lightgrey;
 }
 
 .recent-posts .post a:hover{
     text-decoration: none;
-    color:black;
+    color:red;
 }
 
 .recent-posts .post .title {
@@ -113,3 +125,4 @@ a.group-item-title {
         height:260px;
     }
 }
+
