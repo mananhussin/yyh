@@ -4,11 +4,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Lobster', cursive;
 }
 
 body {
   background-color: #fff;
+    
+  font-family: 'Lobster', cursive;
 }
 
 a:hover {
@@ -21,6 +22,8 @@ a:hover {
   width: 100%;
   background-color: #202020;
   border-bottom: 2px groove red;
+    
+  font-family: 'Lobster', cursive;
 }
 
 .main-header::after {
@@ -118,6 +121,7 @@ text-shadow: 1px 1px 10px #f3f3f3;
   text-align: center;
   color: white;
   box-shadow: 0px 5px 10px #888888;
+    font-family: monospace;
 }
 
 .mc-column1, .mc-column2, .mc-column3 {
@@ -150,6 +154,7 @@ text-shadow: 1px 1px 10px #f3f3f3;
   background-repeat: no-repeat;
   background-position: right;
   box-shadow: 0px 5px 10px #888888;
+    font-family: monospace;
 }
 
 .sc-column1 {
@@ -181,6 +186,10 @@ text-shadow: 1px 1px 10px #f3f3f3;
 
 .secondary-content li {
   padding-top: 5px;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
 }
 
 /* Footer */
