@@ -8,13 +8,16 @@
 
 body {
   background-color: #fff;
-    
-  font-family: 'Lobster', cursive;
+  font-family: monospace;
+}
+
+.title {
+  font-family: 'Lobster', cursive; /* h1 */
 }
 
 a:hover {
   color: red;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Header & Navigation */
@@ -22,8 +25,6 @@ a:hover {
   width: 100%;
   background-color: #202020;
   border-bottom: 2px groove red;
-    
-  font-family: 'Lobster', cursive;
 }
 
 .main-header::after {
@@ -38,11 +39,12 @@ a:hover {
 }
 
 .logo {
-  text-decoration: none;
   color: white;
   float: left;
   font-size: 2em;
   line-height: 60px;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
 }
 
 .main-nav {
@@ -58,12 +60,12 @@ a:hover {
   color: white;
   line-height: 60px;
   font-size: 1.2em;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .main-nav li:hover a {
   color: red;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Splash & Main Heading */
@@ -85,12 +87,14 @@ a:hover {
   color: white;
   text-shadow: 2px 2px 3px red;
   font-size: 5em;
+  font-family: 'Lobster', cursive;
 }
 
 .main-heading p {
   color: white;
   font-size: 1.8em;
   padding: 15px 0 35px 0;
+  font-family: monospace;
 }
 
 .main-heading a {
@@ -98,12 +102,10 @@ a:hover {
   border: 1px solid red;
   border-radius: 5px;
   padding: 10px 20px;
-    text-decoration: none;
-}
-
-.main-heading a {
-text-shadow: 1px 1px 10px #f3f3f3;
-    text-decoration: none;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px #f3f3f3;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
 }
 
 .main-heading a:hover {
@@ -121,7 +123,6 @@ text-shadow: 1px 1px 10px #f3f3f3;
   text-align: center;
   color: white;
   box-shadow: 0px 5px 10px #888888;
-    font-family: monospace;
 }
 
 .mc-column1, .mc-column2, .mc-column3 {
@@ -154,7 +155,6 @@ text-shadow: 1px 1px 10px #f3f3f3;
   background-repeat: no-repeat;
   background-position: right;
   box-shadow: 0px 5px 10px #888888;
-    font-family: monospace;
 }
 
 .sc-column1 {
@@ -188,10 +188,6 @@ text-shadow: 1px 1px 10px #f3f3f3;
   padding-top: 5px;
 }
 
-.title {
-    font-family: 'Lobster', cursive;
-}
-
 /* Footer */
 .main-footer {
   width: 100%;
@@ -210,6 +206,6 @@ text-shadow: 1px 1px 10px #f3f3f3;
 .main-footer a {
   color: red;
   display: inline-block;
-    text-decoration: none;
+  text-decoration: none;
   margin-bottom: 10px;
 }
