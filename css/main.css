@@ -1,31 +1,200 @@
-/* Main css file */
+/* Main Css File */
 
 /* General */
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lobster', cursive;
+}
+
+body {
+  background-color: #fff;
+}
+
+a:hover {
+  color: red;
 }
 
 /* Header & Navigation */
 .main-header {
   width: 100%;
-  background-color: #333333;
+  background-color: #202020;
+  border-bottom: 2px groove red;
+}
+
+.main-header::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .header-container {
   width: 90%;
   margin: 0 auto;
-  background-color: gray;
 }
 
-.header-nav {
-  
+.logo {
+  text-decoration: none;
+  color: white;
+  float: left;
+  font-size: 2em;
+  line-height: 60px;
 }
 
-.header-nav ul li {
+.main-nav {
+  float: right;
+}
+
+.main-nav ul li {
   display: inline-block;
 }
 
-.header-nav ul li a {
+.main-nav ul li a {
+  padding: 0 20px;
+  color: white;
+  line-height: 60px;
+  font-size: 1.2em;
+}
+
+.main-nav li:hover a {
+  color: red;
+}
+
+/* Splash & Main Heading */
+.main-heading {
+  background-image: url('../img/splash.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  border-bottom: 3px groove red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.main-heading h1 {
+  color: white;
+  text-shadow: 2px 2px 3px red;
+  font-size: 5em;
+}
+
+.main-heading p {
+  color: white;
+  font-size: 1.8em;
+  padding: 15px 0 35px 0;
+}
+
+.main-heading a {
+  color: white;
+  border: 1px solid red;
+  border-radius: 5px;
   padding: 10px 20px;
+}
+
+.main-heading a {
+text-shadow: 1px 1px 10px #f3f3f3;
+}
+
+.main-heading a:hover {
+  color: red;
+}
+
+/* Main Content */
+.main-content {
+  width: 95%;
+  margin: 45px auto;
+  padding: 35px 15px;
+  background-color: #202020;
+  border: 2px groove red;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.mc-column1, .mc-column2, .mc-column3 {
+  display: inline-block;
+  width: 30%;
+  padding: 0 15px;
+}
+
+.icon1, .icon2, .icon3 {
+  padding-bottom: 25px;
+}
+
+.main-content h1 {
+  padding-bottom: 15px;
+  color: white;
+  text-shadow: 1px 1px 2px red;
+}
+
+/* Secondary Content */
+.secondary-content {
+  width: 95%;
+  height: 250px;
+  margin: 45px auto;
+  padding: 15px;
+  background-color: #202020;
+  border: 2px groove red;
+  border-radius: 15px;
+  color: white;
+  background-image: url("../img/zed.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.sc-column1 {
+  float: left;
+  display: inline-block;
+  width: 200px;
+}
+
+.sc-column2 {
+  float: left;
+  display: inline-block;
+  width: 200px;
+}
+
+.sc-column3 {
+  float: left;
+  display: inline-block;
+  width: 200px;
+}
+
+.secondary-content h1 {
+  margin: 15px;
+  text-shadow: 1px 1px 2px red;
+}
+
+.secondary-content ul {
+  padding-left: 50px;
+}
+
+.secondary-content li {
+  padding-top: 5px;
+}
+
+/* Footer */
+.main-footer {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background-color: #202020;
+  border-top: 2px groove red;
+}
+
+.main-footer p {
+  color: white;
+  margin: 10px;
+  font-style: italic;
+}
+
+.main-footer a {
+  color: red;
+  display: inline-block;
+  margin-bottom: 10px;
 }
