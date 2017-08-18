@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- Main CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/forum-style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    </head>
+    <body>
+        <!-- maybe a navbar or something, not sure -->
+        <center><a href="../">Home</a></center>
+        <br/>
+        <!-- Container -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Kind of cheating but for some reason the col-md-offset wasn't working or really I wasn't using it right :// this is my solution. Creates a slightly centering column which doesnt exist on smaller screens-->
+                <div class="col-md-2"></div>
+                <div class="col-md-8 col-md-offset-2 col-xs-12">
+                
+                    <!-- Put content here -->
+                    
+                    <div class="forum-group">
+                        <div class="group-head">Gaming Forums</div>
+                        <div class="group-item">
+                            <a class="group-item-title" href="#">Overwatch</a>
+                            <p class="lead">Some general talk about overwatch</p>
+                        </div>
+                        <div class="group-item">
+                            <a class="group-item-title" href="#">League</a>
+                            <p class="lead">Discuss Strats and show off</p>
+                        </div>
+                        <div class="group-item last-item">
+                            <a class="group-item-title" href="#">DoTA</a>
+                            <p class="lead">Show how much cooler a game than league DoTA is</p>
+                        </div>
+                    </div>
+                    
+                    <div class="forum-group">
+                        <div class="group-head">Server Forums</div>
+                        <div class="group-item">
+                            <a class="group-item-title" href="#">Server Questions</a>
+                            <p class="lead">Ask any question you have about the server</p>
+                        </div>
+                        <div class="group-item last-item">
+                            <a class="group-item-title" href="#">Server Discussion</a>
+                            <p class="lead">Post anything you want to talk about here</p>
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- This technically doesn't need to be here, but I put it here to stay consistent -->
+                <div class="col-md-2">
+                    <div class="recent-posts">
+                        <center><span class="important">Recent Posts</span></center>
+                        <hr />
+                        <div class="scroll-container">
+                            <!-- Have this update later, probably using angularJs?? -->
+                            <div class="post">
+                                <div class="title"><a href="#">Why DoTA is better than League</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">DoTA</a></div>
+                                <div class="author">by xDest</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">How to be good at overwatch</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Overwatch</a></div>
+                                <div class="author">by TheLegend27</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">Ban xcoolgamer37x</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Server Discussion</a></div>
+                                <div class="author">by WellRespectedMember</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">can i friend to server invit?</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Server Questions</a></div>
+                                <div class="author">by xcoolgamer37x</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </body>
+</html>

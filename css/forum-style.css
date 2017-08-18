@@ -1,0 +1,128 @@
+/* Forum styles */
+
+.forum-group {
+    background-color:#202020;
+    border-style: solid;
+    border-width: 2px;
+    border-color:red;
+    border-radius: 10px;
+    color:black;
+    font-size:18px;
+    margin: 10px 0px 10px 0px;
+}
+
+.forum-group .group-head {
+    width:100%;
+    font-family: 'Lobster',cursive;
+    border-radius: 10px;
+    box-shadow: 0px 4px 1px red;
+    text-shadow: 2px 2px 4px red;
+    background-color:#202020;
+    color:white;
+    font-size:32px;
+    padding: 10px 0px 10px 25px;
+}
+
+.forum-group .group-item {
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    color:white;
+    border-radius: 0;
+    padding-left: 25px;
+}
+
+a.group-item-title {
+    width:100%;
+    font-size:24px;
+}
+
+.forum-group .group-item.last-item {
+    border-radius:10px;
+    border-bottom-style: hidden;
+    padding-bottom: 5px;
+}
+
+.forum-group a {
+    color:white;
+    font-weight: 600;
+    transition: 250ms;
+}
+
+.forum-group a:hover {
+    transition: 250ms;
+    font-size: 28px;
+    text-decoration: none;
+    color: red;
+    text-shadow: 1px 1px 4px white;
+}
+
+/*            */
+
+.recent-posts {
+    width:100%;
+    margin-top:10px;
+    padding:20px;
+    border-style:groove;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color:red;
+    background-color: #202020;
+    height:400px;
+    color: white;
+    overflow: hidden;
+}
+
+.recent-posts .scroll-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 300px;
+    padding:10px;
+    border-style: hidden;
+}
+
+
+.important {
+    font-size: 24px;
+    color:white;
+    font-family: 'Lobster',cursive;
+    text-shadow: 2px 2px 4px red;
+    font-weight: 700px;
+}
+
+.recent-posts .post {
+    display:block;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.recent-posts .post a{
+    text-decoration: none;
+    color:lightgrey;
+}
+
+.recent-posts .post a:hover{
+    text-decoration: none;
+    color:red;
+}
+
+.recent-posts .post .title {
+    font-size:20px;
+}
+
+
+/* Holy shit this part took so long because I forgot the "px" at the end of max-width:1250px */
+
+@media screen and (min-width:1251px) {
+    .recent-posts .scroll-container {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .recent-posts .scroll-container {
+        height:260px;
+    }
+}
+
