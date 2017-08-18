@@ -22,7 +22,7 @@ ul {
     border-radius: 10px;
     color:black;
     font-size:18px;
-    margin: 10px 0px 10px 0px;
+    margin: 25px 0px 25px 0px;
     transition: 500ms;
 }
 
@@ -231,12 +231,38 @@ hr {
 
 .main-nav li:hover a {
   color: red;
-  text-decoration: none;
+  text-decoration: none;    
 }
 
 
 a:hover {
   color: red;
   text-decoration: none;
+}
+
+.splash {
+    background-image: url('../img/splash.jpg');
+    background-size: cover;
+    background-position: center;
+    font-size: 64px;
+    font-family: 'Lobster',cursive;
+    color:white;
+    text-shadow: 2px 2px 2px red;
+    text-align: center;
+    padding: 120px 0px 120px 0px;
+    border-bottom: 2px solid red;
+}
+
+.content {
+    border: 2px solid red;
+    background-color: #202020;
+    color:white;
+    font-family: 'Helvetica';
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    margin: 10px 0px 5px 0px;
 }
 
