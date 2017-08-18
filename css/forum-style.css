@@ -140,6 +140,10 @@ a.group-item-title {
     font-size:20px;
 }
 
+hr {
+    border-color:white;
+}
+
 
 /* Holy shit this part took so long because I forgot the "px" at the end of max-width:1250px */
 
