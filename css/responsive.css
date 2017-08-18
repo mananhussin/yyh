@@ -1,0 +1,9 @@
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+  .mc-column1, .mc-column2, .mc-column3 {
+    display: block;
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 85%;
+  }
+}
