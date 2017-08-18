@@ -23,7 +23,9 @@ ul {
     color:black;
     font-size:18px;
     margin: 10px 0px 10px 0px;
+    transition: 500ms;
 }
+
 
 .forum-group .group-head {
     width:100%;
@@ -35,6 +37,7 @@ ul {
     color:white;
     font-size:32px;
     padding: 10px 0px 10px 25px;
+    transition:250ms;
 }
 
 .forum-group .group-item {
@@ -71,6 +74,17 @@ a.group-item-title {
     text-shadow: 1px 1px 4px white;
 }
 
+.group-wrap {
+    display:none;
+}
+
+.forum-group .group-head.group-head-hover {
+    font-size:42px;
+    transition: 250ms;
+    color:red;
+    text-shadow: 2px 2px 2px white;
+}
+
 /*    Recent Posts        */
 
 .recent-posts {
@@ -85,6 +99,7 @@ a.group-item-title {
     height:400px;
     color: white;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .recent-posts .scroll-container {
