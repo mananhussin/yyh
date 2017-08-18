@@ -57,7 +57,7 @@ a.group-item-title {
     text-shadow: 1px 1px 4px white;
 }
 
-/*            */
+/*    Recent Posts        */
 
 .recent-posts {
     width:100%;
@@ -124,5 +124,80 @@ a.group-item-title {
     .recent-posts .scroll-container {
         height:260px;
     }
+}
+
+/*         Footer         */
+
+.main-footer {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background-color: #202020;
+  border-top: 2px groove red;
+}
+
+.main-footer p {
+  color: white;
+  margin: 10px;
+  font-style: italic;
+}
+
+
+.main-footer a {
+  color: red;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+
+/* Header / Nav */
+
+
+.main-header {
+  width: 100%;
+  background-color: #202020;
+  border-bottom: 2px groove red;
+}
+
+.main-header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  float: left;
+  font-size: 2em;
+  line-height: 60px;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+}
+
+.main-nav {
+  float: right;
+}
+
+.main-nav ul li {
+  display: inline-block;
+}
+
+.main-nav ul li a {
+  padding: 0 20px;
+  color: white;
+  line-height: 60px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.main-nav li:hover a {
+  color: red;
+  text-decoration: none;
 }
 
