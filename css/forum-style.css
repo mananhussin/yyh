@@ -1,3 +1,17 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
 /* Forum styles */
 
 .forum-group {
@@ -8,8 +22,10 @@
     border-radius: 10px;
     color:black;
     font-size:18px;
-    margin: 10px 0px 10px 0px;
+    margin: 25px 0px 25px 0px;
+    transition: 500ms;
 }
+
 
 .forum-group .group-head {
     width:100%;
@@ -21,6 +37,7 @@
     color:white;
     font-size:32px;
     padding: 10px 0px 10px 25px;
+    transition:250ms;
 }
 
 .forum-group .group-item {
@@ -57,7 +74,18 @@ a.group-item-title {
     text-shadow: 1px 1px 4px white;
 }
 
-/*            */
+.group-wrap {
+    display:none;
+}
+
+.forum-group .group-head.group-head-hover {
+    font-size:42px;
+    transition: 250ms;
+    color:red;
+    text-shadow: 2px 2px 2px white;
+}
+
+/*    Recent Posts        */
 
 .recent-posts {
     width:100%;
@@ -71,6 +99,7 @@ a.group-item-title {
     height:400px;
     color: white;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .recent-posts .scroll-container {
@@ -111,6 +140,10 @@ a.group-item-title {
     font-size:20px;
 }
 
+hr {
+    border-color:white;
+}
+
 
 /* Holy shit this part took so long because I forgot the "px" at the end of max-width:1250px */
 
@@ -124,5 +157,112 @@ a.group-item-title {
     .recent-posts .scroll-container {
         height:260px;
     }
+}
+
+/*         Footer         */
+
+.main-footer {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background-color: #202020;
+  border-top: 2px groove red;
+}
+
+.main-footer p {
+  color: white;
+  margin: 10px;
+  font-style: italic;
+}
+
+
+.main-footer a {
+  color: red;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+
+/* Header / Nav */
+
+.main-header {
+  width: 100%;
+  background-color: #202020;
+  border-bottom: 2px groove red;
+}
+
+.main-header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  float: left;
+  font-size: 2em;
+  line-height: 60px;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+}
+
+.main-nav {
+  float: right;
+}
+
+.main-nav ul li {
+  display: inline-block;
+}
+
+.main-nav ul li a {
+  padding: 0 20px;
+  color: white;
+  line-height: 60px;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav li:hover a {
+  color: red;
+  text-decoration: none;    
+}
+
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.splash {
+    background-image: url('../img/splash.jpg');
+    background-size: cover;
+    background-position: center;
+    font-size: 64px;
+    font-family: 'Lobster',cursive;
+    color:white;
+    text-shadow: 2px 2px 2px red;
+    text-align: center;
+    padding: 120px 0px 120px 0px;
+    border-bottom: 2px solid red;
+}
+
+.content {
+    border: 2px solid red;
+    background-color: #202020;
+    color:white;
+    font-family: 'Helvetica';
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    margin: 10px 0px 5px 0px;
 }
 

@@ -3,6 +3,8 @@
     <head>
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Custom script -->
+        <script src="../js/forum-scripts.js"></script>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- Main CSS -->
@@ -12,45 +14,135 @@
     </head>
     <body>
         <!-- maybe a navbar or something, not sure -->
-        <center><a href="../">Home</a></center>
-        <br/>
+        <header class="main-header">
+            <div class="header-container">
+                <a class="logo" href="../">The Gaming Lounge</a>
+                    <!-- Logo -->
+                    <!-- <img src="" alt="logo" width=""> -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
         <!-- Container -->
         <div class="container-fluid">
+            <div class="row splash">
+                <div class="col-12">The Gaming Lounge - Forum</div>
+            </div>
             <div class="row">
+                
                 <!-- Kind of cheating but for some reason the col-md-offset wasn't working or really I wasn't using it right :// this is my solution. Creates a slightly centering column which doesnt exist on smaller screens-->
-                <div class="col-md-2"></div>
+                <div class="col-md-2" style="background-image: url('https://vignette3.wikia.nocookie.net/overwatch/images/1/15/Roadhog_portrait_m.png/revision/latest?cb=20160429040723');background-size: auto; background-repeat: no-repeat;background-position: -100px 0px;background-color:#fff;"></div>
                 <div class="col-md-8 col-md-offset-2 col-xs-12">
                 
                     <!-- Put content here -->
                     
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida finibus fringilla. Ut sed enim consequat, ultricies orci ultricies, aliquet diam. Cras in est accumsan, scelerisque lorem tincidunt, vestibulum ante. Nullam semper, velit vel vehicula pretium, velit urna dapibus felis, vel interdum ligula nibh eu massa. Morbi convallis tincidunt egestas. Donec consectetur magna at augue consectetur iaculis. Nulla eu mi risus. </p>
+                    </div>
+                    
+                    
+                    
+                    <!-- Forum groups below -->
+                    
                     <div class="forum-group">
-                        <div class="group-head">Gaming Forums</div>
-                        <div class="group-item">
-                            <a class="group-item-title" href="#">Overwatch</a>
-                            <p class="lead">Some general talk about overwatch</p>
-                        </div>
-                        <div class="group-item">
-                            <a class="group-item-title" href="#">League</a>
-                            <p class="lead">Discuss Strats and show off</p>
-                        </div>
-                        <div class="group-item last-item">
-                            <a class="group-item-title" href="#">DoTA</a>
-                            <p class="lead">Show how much cooler a game than league DoTA is</p>
+                        <div class="group-head">Server Forums</div>
+                        <div class="group-wrap">
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Server Questions</a>
+                                <p class="lead">Ask any question you have about the server</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Server Discussion</a>
+                                <p class="lead">Post anything you want to talk about here</p>
+                            </div>
+                            <div class="group-item last-item">
+                                <a class="group-item-title" href="#">Introductions</a>
+                                <p class="lead">Introduce yourself to everyone</p>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="forum-group">
-                        <div class="group-head">Server Forums</div>
-                        <div class="group-item">
-                            <a class="group-item-title" href="#">Server Questions</a>
-                            <p class="lead">Ask any question you have about the server</p>
-                        </div>
-                        <div class="group-item last-item">
-                            <a class="group-item-title" href="#">Server Discussion</a>
-                            <p class="lead">Post anything you want to talk about here</p>
+                        <div class="group-head">Gaming Forums</div>
+                        <div class="group-wrap">
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Overwatch</a>
+                                <p class="lead">Some general talk about overwatch</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">League</a>
+                                <p class="lead">Discuss Strats and show off</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">DoTA</a>
+                                <p class="lead">Show how much cooler a game than league DoTA is</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">osu!</a>
+                                <p class="lead">Share beatmaps and skins</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Minecraft</a>
+                                <p class="lead">Quality game, talk nice</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Path of Exile</a>
+                                <p class="lead">Never heard of it</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Rocket League</a>
+                                <p class="lead">Share videos and find other players</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Counter Strike</a>
+                                <p class="lead">AWP</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Quake</a>
+                                <p class="lead">Boom</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Starcraft II</a>
+                                <p class="lead">Intense</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Unturned</a>
+                                <p class="lead">Can't Describe</p>
+                            </div>
+                            <div class="group-item">
+                                <a class="group-item-title" href="#">Rust</a>
+                                <p class="lead">Talk with others</p>
+                            </div>
+                            <div class="group-item last-item">
+                                <a class="group-item-title" href="#">Black Squads</a>
+                                <p class="lead">Bang Bang</p>
+                            </div>
                         </div>
                     </div>
                 
+                    <div class="forum-group">
+                        <div class="group-head">Development Forums</div>
+                        <div class="group-wrap">
+                        <div class="group-item">
+                            <a class="group-item-title" href="#">Coding Discussion</a>
+                            <p class="lead">Ask any question or post a guide for any coding projects here</p>
+                        </div>
+                        <div class="group-item">
+                            <a class="group-item-title" href="#">Photoshop Discussion</a>
+                            <p class="lead">Share projects and help with others</p>
+                        </div>
+                        <div class="group-item last-item">
+                            <a class="group-item-title" href="#">Video Discussion</a>
+                            <p class="lead">Show off videos you've made and help people with theirs</p>
+                        </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- This technically doesn't need to be here, but I put it here to stay consistent -->
                 <div class="col-md-2">
@@ -89,6 +181,10 @@
                 
             </div>
         </div>
+        <footer class="main-footer">
+            <p>Copyright © 2017 The Gaming Lounge</p>
+            <a href="#">Back to top »</a>
+        </footer>
 
     </body>
 </html>
