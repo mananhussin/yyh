@@ -386,6 +386,20 @@ a:hover {
   height: 10%;
 }
   
+
+.content {
+    border: 2px solid red;
+    background-color: #202020;
+    color:white;
+    font-family: 'Helvetica';
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    margin: 10px 0px 5px 0px;
+}
+
 .content.no-pad {
     padding: 0;
 }
