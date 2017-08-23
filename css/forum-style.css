@@ -192,6 +192,11 @@ hr {
     padding: 10px;
 }
 
+.post-list-replies {
+    display: inline-block;
+    padding: 10px;
+}
+
 
 /* Actual Posts, try not to confuse */
 
