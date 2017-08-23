@@ -278,7 +278,7 @@ a:hover {
 }
   
 
-/*.content {
+.content {
     border: 2px solid red;
     background-color: #202020;
     color:white;
@@ -289,4 +289,8 @@ a:hover {
     margin: 0;
     border-radius: 5px;
     margin: 10px 0px 5px 0px;
-}*/
+}
+
+.content.no-pad {
+    padding: 0;
+}
