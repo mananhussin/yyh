@@ -16,4 +16,7 @@ $(document).ready(function() {
     $(".group-head").mouseout(function(e) {
         $(e.target).removeClass("group-head-hover");
     });
+    
+    
+    
 });
