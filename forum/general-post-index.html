@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Custom script -->
+        <script src="../js/forum-scripts.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- Main CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/forum-style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    </head>
+    <body>
+        <!-- maybe a navbar or something, not sure -->
+        <header class="main-header">
+            <div class="header-container">
+                <a class="logo" href="../">The Gaming Lounge</a>
+                    <!-- Logo -->
+                    <!-- <img src="" alt="logo" width=""> -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="../forum/">Forum</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
+        <!-- Container -->
+        <div class="container-fluid">
+            <div class="row splash">
+                <div class="col-12">The Gaming Lounge - Forum</div>
+            </div>
+            <div class="row">
+                
+                <!-- Kind of cheating but for some reason the col-md-offset wasn't working or really I wasn't using it right :// this is my solution. Creates a slightly centering column which doesnt exist on smaller screens-->
+                <div class="col-md-2" style="background-image: url('https://vignette3.wikia.nocookie.net/overwatch/images/1/15/Roadhog_portrait_m.png/revision/latest?cb=20160429040723');background-size: auto; background-repeat: no-repeat;background-position: -100px 0px;background-color:#fff;"></div>
+                <div class="col-md-8 col-md-offset-2 col-xs-12">
+                    
+                    <!-- Put content here -->
+                    
+                    <div class="content no-pad">
+                        <div class="post-header">
+                            <div class="post-title">
+                                My First Post
+                            </div>
+                            <div class="post-author">xDest</div>
+                            <div class="post-date">Aug 20, 2017</div>
+                        </div>
+                        <div class="post-body"> <!-- Will probably use post-body in replacement of <p> -->
+                            Hey guys,<br/>
+                            Remind me to make a converter from default text to html. In addition, <br/>
+                            restrict at least these two characeters &lt; &gt;.<br />
+                            Let's just<br/>
+                            add<br/>
+                            more text and <br/>
+                            lines!
+                        </div>
+                    </div>
+                    
+                    <div class="content no-pad">
+                        <div class="important">Replies</div>
+                        <!-- Begin replies -->
+                        <!-- Add last-reply to last post reply wrap -->
+                        <div class="post-reply-wrap">
+                            <div class="post-reply-body">
+                                Just some text, you know? Good statements in there.
+                            </div>
+                            <div class="post-reply-footer">
+                                <div class="post-reply-author">SmoothTalker23</div>
+                                <div class="post-reply-date">Aug 21, 2017</div>
+                            </div>
+                        </div>
+                        <div class="post-reply-wrap">
+                            <div class="post-reply-body">
+                                actually<br/>
+                                I disagree with ur statenebt<br/>
+                                u suck LooOOO<br/>
+                                OOoOL xddd<br/>
+                            </div>
+                            <div class="post-reply-footer">
+                                <div class="post-reply-author">SmoothTalker23</div>
+                                <div class="post-reply-date">Aug 21, 2017</div>
+                            </div>
+                        </div>
+                        <div class="post-reply-wrap last-reply">
+                            <div class="post-reply-body">
+                                u asshole im<br/>
+                                reporting u for ru<br/>
+                                de behavor HAhA
+                            </div>
+                            <div class="post-reply-footer">
+                                <div class="post-reply-author">xdman66</div>
+                                <div class="post-reply-date">Aug 21, 2017</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                </div>
+                <!-- Should probably be on every forum page -->
+                <div class="col-md-2">
+                    <div class="recent-posts">
+                        <center><span class="important">Recent Posts</span></center>
+                        <hr />
+                        <div class="scroll-container">
+                            <!-- Have this update later, probably using angularJs?? -->
+                            <div class="post">
+                                <div class="title"><a href="#">Why DoTA is better than League</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">DoTA</a></div>
+                                <div class="author">by xDest</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">How to be good at overwatch</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Overwatch</a></div>
+                                <div class="author">by TheLegend27</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">Ban xcoolgamer37x</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Server Discussion</a></div>
+                                <div class="author">by WellRespectedMember</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">can i friend to server invit?</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Server Questions</a></div>
+                                <div class="author">by xcoolgamer37x</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p>Copyright © 2017 The Gaming Lounge</p>
+            <a href="#">Back to top »</a>
+        </footer>
+
+    </body>
+</html>
