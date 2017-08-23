@@ -9,6 +9,11 @@
 body {
   background-color: #fff;
   font-family: Helvetica;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: normal;
 }
 
 .title /* h1 */ {
@@ -69,7 +74,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* Splash & Main Heading */
+/* Splash/Main Heading */
 .main-heading {
   background-image: url('../img/splash.jpg');
   background-size: cover;
@@ -89,6 +94,7 @@ a:hover {
   text-shadow: 2px 2px 3px red;
   font-size: 7em;
   font-family: 'Lobster', cursive;
+  font-weight: normal;
 }
 
 .main-heading p {

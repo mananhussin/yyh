@@ -6,6 +6,7 @@
 
 body {
   background-color: #fff;
+  font-family: Helvetica;
 }
 
 ul {
@@ -32,12 +33,24 @@ ul {
     font-family: 'Lobster',cursive;
     border-radius: 10px;
     box-shadow: 0px 4px 1px red;
-    text-shadow: 2px 2px 4px red;
+    text-shadow: 1px 1px 4px red;
     background-color:#202020;
     color:white;
     font-size:32px;
-    padding: 10px 0px 10px 25px;
+    padding: 15px;
     transition:250ms;
+}
+
+.forum-group .group-head sub {
+  font-family: Helvetica;
+  text-decoration: none;
+  border-radius: 0px;
+  box-shadow: none;
+  text-shadow: none;
+  background-color: none;
+  color:white;
+  font-size:16px;
+  padding: 0;
 }
 
 .forum-group .group-item {
@@ -111,9 +124,8 @@ a.group-item-title {
     border-style: hidden;
 }
 
-
 .important {
-    font-size: 24px;
+    font-size: 2em;
     color:white;
     font-family: 'Lobster',cursive;
     text-shadow: 2px 2px 4px red;
@@ -350,32 +362,30 @@ a:hover {
 }
 
 .splash {
-    background-image: url('../img/splash.jpg');
-    background-size: cover;
-    background-position: center;
-    font-size: 64px;
-    font-family: 'Lobster',cursive;
-    color:white;
-    text-shadow: 2px 2px 2px red;
-    text-align: center;
-    padding: 120px 0px 120px 0px;
-    border-bottom: 2px solid red;
+  background-image: url('../img/splash.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  border-bottom: 3px groove red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 5px 10px #888888;
 }
 
-.content {
-    border: 2px solid red;
-    background-color: #202020;
-    color:white;
-    font-family: 'Helvetica';
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    border-radius: 5px;
-    margin: 10px 0px 5px 0px;
+.splash h1 {
+  color: white;
+  text-shadow: 2px 2px 3px red;
+  font-size: 7em;
+  font-family: 'Lobster', cursive;
 }
 
+.col-md-2 {
+  height: 10%;
+}
+  
 .content.no-pad {
     padding: 0;
 }
-
