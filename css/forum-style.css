@@ -60,6 +60,7 @@ ul {
     color:white;
     border-radius: 0;
     padding-left: 25px;
+    padding-right: 25px;
 }
 
 a.group-item-title {
@@ -169,6 +170,114 @@ hr {
     .recent-posts .scroll-container {
         height:260px;
     }
+}
+
+
+/* Post List */
+
+.post-list-title {
+    font-size: 28px;
+    border-bottom: 1px dashed gray;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 2px 2px red;
+    transition: 250ms;
+}
+
+.post-list-title a {
+    /* Nada */
+}
+
+.post-list-title a:hover {
+    transition: 250ms;
+    color: red;
+    text-shadow: 1px 2px 2px white;
+}
+
+.post-list-author { 
+    display: inline-block;
+    padding: 10px;
+}
+
+.post-list-date {
+    display: inline-block;
+    padding: 10px;
+}
+
+
+/* Actual Posts, try not to confuse */
+
+.post-header {
+    text-align: left;
+    color: white;
+    font-size: 28px;
+    border-bottom: 2px solid red;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 2px 2px red;
+}
+
+.post-title {
+    font-size: 48px;
+    border-bottom: 1px solid white;
+    padding-left: 15px;
+    color: white;
+    display: block;
+    font-weight: 600;
+    text-shadow: 1px 2px 2px red;
+}
+
+.post-author {
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+}
+
+.post-date {
+    display: inline-block;
+    padding: 25px;
+    padding: 10px 5px 10px 15px;
+}
+
+.post-body {
+    text-align: left;
+    padding: 15px;
+    font-size: 22px;
+    font-family:inherit;
+    padding-left: 25px;
+}
+
+
+/* Posts --> Replies */
+.post-reply-wrap {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    text-align: left;
+    font-size: 18px;
+    padding: 15px 25px 15px 25px;
+}
+
+.post-reply-wrap.last-reply {
+    border-bottom-width: 0px;
+}
+
+.post-reply-body {
+    /* nada so far */
+}
+
+.post-reply-footer {
+    border-top: 1px dashed gray;
+    font-size:14px;
+    padding: 0;
+    
+}
+
+.post-reply-author {
+    display: inline-block;
+    
+}
+
+.post-reply-date {
+    display: inline-block;
 }
 
 /*         Footer         */
