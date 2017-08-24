@@ -19,7 +19,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <script src="../js/util.js"></script>
         <!-- Main CSS -->
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../css/forum-style.css">
@@ -56,11 +55,60 @@
                     <!-- Put content here -->
                     
                     <div class="content no-pad" id="post-original">
-                        
+                        <div class="post-header">
+                            <div class="post-title">
+                                My First Post
+                            </div>
+                            <div class="post-author">xDest</div>
+                            <div class="post-date">Aug 20, 2017</div>
+                        </div>
+                        <div class="post-body"> <!-- Will probably use post-body in replacement of <p> -->
+                            Hey guys,<br/>
+                            Remind me to make a converter from default text to html. In addition, <br/>
+                            restrict at least these two characeters &lt; &gt;.<br />
+                            Let's just<br/>
+                            add<br/>
+                            more text and <br/>
+                            lines!
+                        </div>
                     </div>
                     
                     <div class="content no-pad" id="post-replies">
-                        
+                        <div class="important">Replies</div>
+                        <!-- Begin replies -->
+                        <!-- Add last-reply to last post reply wrap -->
+                        <div class="post-reply-wrap">
+                            <div class="post-reply-body">
+                                Just some text, you know? Good statements in there.
+                            </div>
+                            <div class="post-reply-footer">
+                                <div class="post-reply-author">SmoothTalker23</div>
+                                <div class="post-reply-date">Aug 21, 2017</div>
+                            </div>
+                        </div>
+                        <div class="post-reply-wrap">
+                            <div class="post-reply-body">
+                                actually<br/>
+                                I disagree with ur statenebt<br/>
+                                u suck LooOOO<br/>
+                                OOoOL xddd<br/>
+                            </div>
+                            <div class="post-reply-footer">
+                                <div class="post-reply-author">SmoothTalker23</div>
+                                <div class="post-reply-date">Aug 21, 2017</div>
+                            </div>
+                        </div>
+                        <div class="post-reply-wrap last-reply">
+                            <div class="post-reply-body">
+                                u asshole im<br/>
+                                reporting u for ru<br/>
+                                de behavor HAhA
+                            </div>
+                            <div class="post-reply-footer">
+                                <div class="post-reply-author">xdman66</div>
+                                <div class="post-reply-date">Aug 21, 2017</div>
+                            </div>
+                        </div>
                     </div>
                 
                     
@@ -107,7 +155,7 @@
             <a href="#">Back to top »</a>
         </footer>
         <!-- Custom script -->
-        <script src="../js/post-scripts.js"></script>
+        <script src="../js/forum-scripts.js"></script>
 
     </body>
 </html>
