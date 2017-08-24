@@ -409,3 +409,26 @@ a:hover {
 .content.no-pad {
     padding: 0;
 }
+
+
+
+/* Reply */
+#reply-wrap {
+    display:none;
+}
+
+.reply {
+    border-radius: 10px;
+    border-color:red;
+    font-family: "Helvetica";
+    color:white;
+    text-shadow: 2px 2px 2px red;
+    background-color: #202020;
+    font-size: 24px;
+    padding:4px 9px 5px 8px;
+}
+
+.reply:focus {
+    outline:0;
+}
+

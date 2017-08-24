@@ -17,4 +17,13 @@ $(document).ready(function() {
         insertHTMLToElement(post.generateReplyHTML(), $("#post-replies"));
     });
     
+    
+    
+    
+    
+    //Add reply button slide toggle
+    $(".reply").click(function(x) {
+        $("#reply-wrap").slideToggle(400);
+    });
+    
 });
