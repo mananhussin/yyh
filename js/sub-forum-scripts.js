@@ -42,6 +42,7 @@ $(document).ready(function () {
         
         if(posts == null) {
             console.log("No posts found.");
+            insertHTMLToElement("<center><span style=\"color:white\">No posts found.</span></center>", $(".forum-group"));
             return;
         }
         //Show 10 most recent posts, insert in **ALL** divs (there should only be one) with the forum-group class.
