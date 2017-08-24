@@ -1,6 +1,19 @@
 /* NOTE: Contact Page Css File */
 
 /* NOTE: General */
+.fade-in {
+	-webkit-animation: fadeIn 750ms;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+	}
+}
 
 /* NOTE: Form Section */
 .form-container {
@@ -42,6 +55,7 @@ input, textarea {
   border-radius: 5px;
   padding: 10px;
   font-family: Helvetica;
+  transition: 300ms;
 }
 
 input:focus, textarea:focus {
@@ -71,7 +85,7 @@ input:focus, textarea:focus {
 }
 
 #submit-button:active {
-  transform: translateY(4px);
+  transform: translateY(6px);
 }
 
 #submit-button:focus {
