@@ -1,0 +1,14 @@
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+  .main-content {
+    flex: none;
+    display: block;
+  }
+  
+  .mc-column1, .mc-column2, .mc-column3 {
+    flex: none;
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+  }
+}
