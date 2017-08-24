@@ -24,7 +24,7 @@ function PostPreview(title, author, date, replyCount) {
 //Generates the html for a group item in sub forums
 PostPreview.prototype.generateHTML = function() {
     var HTML = "";
-    HTML+= "<div class=\"group-item\"><div class=\"post-list-title\"><a href=\"#\">" + this.title + "</a></div>";
+    HTML+= "<div class=\"group-item\"><div class=\"post-list-title\"><a href=\"../../../forum/general-post-index.html?loc=forums/server/introductions/0\">" + this.title + "</a></div>";
     HTML+= "<div class=\"post-list-author\">" + this.author + "</div>";
     HTML+= "<div class=\"post-list-date\">" + convertDateToStr(this.date) + "</div>";
     HTML += "<div class=\"post-list-replies\"> Replies: " + this.replyCount + "</div></div>";
@@ -39,9 +39,9 @@ function PostReply(author, body, date) {
 }
 
 
-PostReply.prototype.generateHTML = function () {
+PostReply.prototype.generateHTML = function (isLast) {
     var HTML = "";
-    HTML+="<div class=\"post-reply-wrap\">";
+    HTML+="<div class=\"post-reply-wrap" + ((isLast) ? " last-reply":"") + "\">";
     HTML+="<div class=\"post-reply-body\">";
     HTML+=this.body;
     HTML+="</div>";
@@ -54,6 +54,7 @@ PostReply.prototype.generateHTML = function () {
     HTML+="</div>";
     HTML+="</div>";
     HTML+="</div>";
+    return HTML;
 }
 
 //Full Post object containing the entire post and it's replies
@@ -82,14 +83,19 @@ Post.prototype.generatePrimaryHTML = function() {
     //Add thing here to convert short cuts into html
     html+=this.body;
     html+="</div>";
+    return html;
 }
 
 Post.prototype.generateReplyHTML = function() {
-    if(replies == null)
-        return "";
-    allReplies = "";
-    for (var i = 0; i < replies.length; i++) {
-        allReplies+=replies[i].generateHTML;
+    try {
+        var a = this.replies;
+    } catch (err) {
+        //No replies
+        return;
+    }
+    allReplies = "<div class=\"important\">Replies</div>";
+    for (var i = 0; i < this.replies.length; i++) {
+        allReplies+=this.replies[i].generateHTML(true);
     }
     return allReplies;
 }
@@ -150,4 +156,27 @@ function retriveDataPromiseAtLocation(location) {
 //This method *OVERRIDES* any previous written html in the element.
 function insertHTMLToElement(newHTML, $location) {
     $location.html(newHTML);
+}
+
+function createPostFromPostData(data) {
+    var newPost = new Post(data.title, data.author, data.date, [], data.body);
+    try {
+        var postReplyData = data.replies;
+        var postReplies = createRepliesFromPostReplyData(postReplyData);
+        newPost.replies = postReplies;
+        
+    } catch (err) {
+        //If no replies, end up here?
+        console.log("No replies for this post.");
+    }
+    return newPost;
+}
+
+function createRepliesFromPostReplyData(data) {
+    //Should be an array
+    var dataAsReplies = [];
+    for(var i = 0; i < data.length; i++) {
+        dataAsReplies.push(new PostReply(data[i].author, data[i].body, data[i].date));
+    }
+    return dataAsReplies;
 }
