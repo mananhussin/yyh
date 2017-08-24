@@ -11,6 +11,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <!-- temporarily disabling. -->
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <script type="text/javascript" src="../js/contact-script.js"></script>
 </head>
 
 <body>
@@ -37,15 +38,33 @@
     <a href="#">Contact Now ⇩</a>
   </div>
   
-  <div class="contact-forum">
+  <div class="form-container">
     <form action="https://formspree.io/joshuainman@icloud.com" method="POST">
-      <input type="text" name="name">
-      <input type="email" name="_replyto">
-      <input type="submit" value="Send">
-      <textarea name="message" rows="6" cols="50"></textarea>
+      
+      <div class="contact-info">
+        <label>
+          <span>Your Name :</span>
+          <input type="text" name="name">
+        </label>
+        <label>
+          <span>Your Email :</span>
+          <input type="email" name="_replyto">
+        </label>
+      </div>
+      
+      <label><span>Message :</span>
+        <textarea name="message"></textarea>
+      </label>
+      
+      <div class="submit-wrapper">
+        <input type="submit" value="S u b m i t" id="submit-button">
+      </div>
+      
     </form>
   </div>
   
-  <div class="spacer" style="height:500px;">
-  </div>
+  <footer class="main-footer">
+    <p>Copyright © 2017 The Gaming Lounge</p>
+    <a href="#">Back to top »</a>
+  </footer>
 </body>
