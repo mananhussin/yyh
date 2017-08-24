@@ -24,7 +24,18 @@ function PostPreview(title, author, date, replyCount) {
 //Generates the html for a group item in sub forums
 PostPreview.prototype.generateHTML = function() {
     var HTML = "";
-    HTML+= "<div class=\"group-item\"><div class=\"post-list-title\"><a href=\"../../../forum/general-post-index.html?loc=forums/server/introductions/0\">" + this.title + "</a></div>";
+    HTML+= "<div class=\"group-item\"><div class=\"post-list-title\"><a href=\"#\">" + this.title + "</a></div>";
+    HTML+= "<div class=\"post-list-author\">" + this.author + "</div>";
+    HTML+= "<div class=\"post-list-date\">" + convertDateToStr(this.date) + "</div>";
+    HTML += "<div class=\"post-list-replies\"> Replies: " + this.replyCount + "</div></div>";
+    return HTML;
+}
+
+
+//Generates the html for a group item in sub forums. Adds proper link
+PostPreview.prototype.generateHTML = function(loc) {
+    var HTML = "";
+    HTML+= "<div class=\"group-item\"><div class=\"post-list-title\"><a href=\"../../../forum/general-post-index.html?loc=" +loc + "\">" + this.title + "</a></div>";
     HTML+= "<div class=\"post-list-author\">" + this.author + "</div>";
     HTML+= "<div class=\"post-list-date\">" + convertDateToStr(this.date) + "</div>";
     HTML += "<div class=\"post-list-replies\"> Replies: " + this.replyCount + "</div></div>";

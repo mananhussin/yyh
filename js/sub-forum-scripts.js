@@ -2,7 +2,7 @@
 
 //This function takes an array of posts, and arranges them based on last index to first index
 //After the arrangement (up to the specified amount), it uses the insert location to insert the generated html.
-function arrangePostsOnPageByMostRecent(posts, amount, $insertLocation) {
+function arrangePostsOnPageByMostRecent(posts, amount, $insertLocation, postLoadLocation) {
     var finIndex = posts.length-1;
     var loadedPosts = [];
     if (posts.length < amount) {
@@ -23,7 +23,8 @@ function arrangePostsOnPageByMostRecent(posts, amount, $insertLocation) {
     
     var newHTML = "";
     for (var i = 0; i < loadedPosts.length; i++) {
-        newHTML+=loadedPosts[i].generateHTML();
+        //Adds proper link to page
+        newHTML+=loadedPosts[i].generateHTML(postLoadLocation+"/"+(loadedPosts.length-1-i));
     }
     //alert(newHTML);
     insertHTMLToElement(newHTML, $insertLocation);
@@ -35,7 +36,8 @@ $(document).ready(function () {
     //When the document has loaded, load posts by post date.
     //Call on the div with the id forumtitle, and get it's text to identify which sub forum to look at.
     var subForum = $("#forumtitle").text();
-    retriveDataPromiseAtLocation("forums/server/introductions").done(function (data) {
+    var promiseLocation = "forums/server/"+subForum;
+    retriveDataPromiseAtLocation(promiseLocation).done(function (data) {
         var posts = data;
         
         if(posts == null) {
@@ -43,6 +45,6 @@ $(document).ready(function () {
             return;
         }
         //Show 10 most recent posts, insert in **ALL** divs (there should only be one) with the forum-group class.
-        arrangePostsOnPageByMostRecent(posts, 10, $(".forum-group"));
+        arrangePostsOnPageByMostRecent(posts, 10, $(".forum-group"), promiseLocation);
     });
 });
