@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC-3ggC6b_OTBpvG4lBTL1xHSErZ2N1d9w",
+            authDomain: "tgl-base.firebaseapp.com",
+            databaseURL: "https://tgl-base.firebaseio.com",
+            projectId: "tgl-base",
+            storageBucket: "tgl-base.appspot.com",
+            messagingSenderId: "382417513275"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- Custom Util js -->
+        <script src="../../../js/util.js"></script>
+        <!-- Main CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../../css/forum-style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../../../img/favicon.ico">
+    </head>
+    <body>
+        <!-- maybe a navbar or something, not sure -->
+        <header class="main-header">
+            <div class="header-container">
+                <a class="logo" href="../">The Gaming Lounge</a>
+                    <!-- Logo -->
+                    <!-- <img src="" alt="logo" width=""> -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="../../../index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="../../../forum/">Forum</a></li>
+                            <li><a href="../../../contact/index.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
+        <!-- Container -->
+        <div class="container-fluid">
+            <div class="row splash">
+                <h1>The Gaming Lounge - Forum</h1>
+            </div>
+            <div class="row">
+                
+                <!-- Kind of cheating but for some reason the col-md-offset wasn't working or really I wasn't using it right :// this is my solution. Creates a slightly centering column which doesnt exist on smaller screens-->
+                <div class="col-md-2" style="background-image: url('https://vignette3.wikia.nocookie.net/overwatch/images/1/15/Roadhog_portrait_m.png/revision/latest?cb=20160429040723');background-size: auto; background-repeat: no-repeat;background-position: -100px 0px;background-color:#fff;"></div>
+                <div class="col-md-8 col-md-offset-2 col-xs-12">
+                    
+                    <!-- Put content here -->
+                    
+                    
+                    <div class="content">
+                        <center><h1>Gaming Forums > Minecraft</h1></center>
+                    </div>
+                    
+                    <!-- Use javascript to generate posts -->
+                    
+                    <!-- ========= IMPORTANT ========= This tells the sub forum script which location to load from in the database -->
+                    <div id="forumtitle" style="display: none;">gaming/minecraft</div>
+                    <div class="forum-group">
+                        <center><span style="color:white">Loading posts...</span></center>
+                        <!--
+                        <div class="group-item">
+                            <div class="post-list-title"><a href="#">My Third Post</a></div>
+                            <div class="post-list-author">xDest</div>
+                            <div class="post-list-date">Aug 20, 2017</div>
+                        </div> -->
+                        <!-- Remember to use last-item class on the last item -->
+                    </div>
+                    
+                    
+                </div>
+                
+                    
+                    
+                <!-- Should probably be on every forum page -->
+                <div class="col-md-2">
+                    <div class="recent-posts">
+                        <center><span class="important">Recent Posts</span></center>
+                        <hr />
+                        <div id="recent-posts" class="scroll-container">
+                            <!-- Have this update later, probably using angularJs?? -->
+                            <div class="post">
+                                <div class="title"><a href="#">Why DoTA is better than League</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">DoTA</a></div>
+                                <div class="author">by xDest</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">How to be good at overwatch</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Overwatch</a></div>
+                                <div class="author">by TheLegend27</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">Ban xcoolgamer37x</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Server Discussion</a></div>
+                                <div class="author">by WellRespectedMember</div>
+                            </div>
+                            <div class="post">
+                                <div class="title"><a href="#">can i friend to server invit?</a></div>
+                                
+                                <div class="sub-forum">written in <a href="#">Server Questions</a></div>
+                                <div class="author">by xcoolgamer37x</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p>Copyright © 2017 The Gaming Lounge</p>
+            <a href="#">Back to top »</a>
+        </footer>
+        <!-- Custom script -->
+        <script src="../../../js/sub-forum-scripts.js"></script>
+    </body>
+</html>
