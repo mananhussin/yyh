@@ -36,7 +36,7 @@ $(document).ready(function () {
     //When the document has loaded, load posts by post date.
     //Call on the div with the id forumtitle, and get it's text to identify which sub forum to look at.
     var subForum = $("#forumtitle").text();
-    var promiseLocation = "forums/server/"+subForum;
+    var promiseLocation = "forums/"+subForum;
     retriveDataPromiseAtLocation(promiseLocation).done(function (data) {
         var posts = data;
         
