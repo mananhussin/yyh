@@ -463,10 +463,14 @@ a:hover {
 
 label {
   display: block;
+  margin-bottom: -10px;
 }
 
 textarea {
-  margin: 15px 0;
+  box-sizing: border-box;
+  margin: 15px auto;
+  display: block;
+  width: 75%;
 }
 
 input, textarea {
