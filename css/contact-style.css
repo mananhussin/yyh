@@ -11,6 +11,18 @@
   border-radius: 15px;
   color: white;
   box-shadow: 0px 5px 10px #888888;
+  background-image: url("../img/diana.png");
+  background-repeat: no-repeat;
+  background-position: -50px;
+  background-size: contain;
+}
+
+.contact-heading {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  padding: 15px 0 0 0;
+  font-size: 2.3em;
+  text-shadow: 1px 1px 2px red;
 }
 
 form {
@@ -46,7 +58,7 @@ input:focus, textarea:focus {
   background-color: red;
   color: white;
   border-color: black;
-  border-bottom: 8px solid black;
+  border-bottom: 6px solid black;
   border-radius: 10px;
   font-size: 1.1em;
   font-family: 'Lobster', cursive;
