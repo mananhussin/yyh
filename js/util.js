@@ -229,14 +229,16 @@ function stringReplaceAt(str, index, replacement) {
 }
 
 function addLineBreaks(str) {
-	var newLines = str.split("\n");
-  var newStr = newLines[0]+"<br/>";
-  for (var i = 1; i < newLines.length-1; i++) {
-  	newStr+=newLines[i];
+    var newLines = str.split("\n");
+    if(newLines.length == 1)
+        return str;
+    var newStr = newLines[0]+"<br/>";
+    for (var i = 1; i < newLines.length-1; i++) {
+    newStr+=newLines[i];
     newStr+="<br/>";
-  }
-  newStr+=newLines[newLines.length-1];
-  return newStr;
+    }
+    newStr+=newLines[newLines.length-1];
+    return newStr;
 }
 
 //This replaces illegal characters with the html short cuts and line breaks with <br>
@@ -251,3 +253,40 @@ function convertRawTextToSafeText(str) {
     str = addLineBreaks(str);
     return str;
 }
+
+
+function getCurrentDateFormatted() {
+    var dateStr = "";
+    var date = new Date();
+    dateStr+=((date.getMonth()+1 < 10) ? "0"+(date.getMonth()+1):(date.getMonth()+1));
+    dateStr+=((date.getDate()+1 < 10) ? "0"+date.getDate():date.getDate());
+    dateStr+=(date.getFullYear()-2000);
+    dateStr+=date.getHours();
+    dateStr+=date.getMinutes();
+    return dateStr;
+}
+
+
+
+function submitReplyToPost(postLocation, text, author) {
+    text = convertRawTextToSafeText(text);
+    retriveDataPromiseAtLocation(postLocation).done(function (x) {
+        var tempPost = createPostFromPostData(x);
+        var reply = new PostReply(author, text, getCurrentDateFormatted());
+        tempPost.replies.push(reply);
+        submitDataToLocation(postLocation+"/replies/"+(tempPost.replies.length-1), reply);
+        location.reload(true);
+        //Reload page
+        //writePostToLocation(postLocation, tempPost);
+    });
+}
+
+function submitDataToLocation(location, data) {
+    firebase.database().ref(location).set(data);
+}
+
+//Careful, this will override.
+function writePostToLocation(postLocation, post) {
+    firebase.database().ref(postLocation).set(post);
+}
+
