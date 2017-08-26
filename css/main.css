@@ -245,10 +245,15 @@ a:hover {
 .dropdown div.drop-content {
     display:none;
     position:relative;
+    z-index: 1;
+    height:0px;
+    transition: 200ms;
 }
 
 .dropdown:hover div.drop-content {
     display:block;
     position: relative;
     z-index: 1;
+    height:auto;
+    transition: 200ms;
 }
