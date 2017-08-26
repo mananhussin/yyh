@@ -39,7 +39,6 @@
           <li><a href="#">About</a></li>
           <li><a href="forum/index.html">Forum</a></li>
           <li><a href="contact/index.html">Contact</a></li>
-          <li><a href="#" id="sign-in">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -112,11 +111,6 @@
     <p>Copyright © 2017 The Gaming Lounge</p>
     <a href="#">Back to top »</a>
   </footer>
-    <script>
-        $("#sign-in").click(function(x) {
-            var loginProvider = new firebase.auth.GoogleAuthProvider();
-            firebase.auth().signInWithPopup(loginProvider);
-        });
-    </script>
+    <script src="js/user-script.js"></script>
 </body>
 </html>
