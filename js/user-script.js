@@ -2,6 +2,14 @@ $(document).ready(function() {
     generateUserLoginElement().then(function(newElement) {
         $(".main-nav").children('ul').append(newElement);
     });
+    
+    $("#sign-out").click(function(x) {
+        firebase.auth().signOut().then(function() {
+            location.reload();
+        }).catch(function(err) {
+            console.log(err);
+        });
+    });
 });
 
 function generateUserLoginElement() {
@@ -11,7 +19,8 @@ function generateUserLoginElement() {
         if(user) {
             //Someone is logged in.
             var name = user.displayName;
-            var newhtml = "<div class=\"dropdown\"><a href=\"#\">" + name + "</a><div class=\"drop-content\"><ul><li><a href=\"#\">Test</a></li></ul></div></div>";
+            $newElement = $("<div", {id:"user",class:"dropdown"})
+            var newhtml = "<div class=\"dropdown\"><li><a href=\"#\">" + name + "</a></li><div class=\"dropdown-items\"><a href=\"#\">Profile</a><br><br><a id=\"sign-out\" href=\"#\">Sign Out</a></div></div>";
             $newElement.html(newhtml);
         } else {
             //We want them to be able to log in.
