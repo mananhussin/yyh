@@ -16,8 +16,7 @@ $(document).ready(function() {
 
 function generateUserLoginElement() {
     $def = new $.Deferred();
-    //firebase.auth().onAuthStateChanged(function(user) {
-        var user = {displayName:"xDest"};
+    firebase.auth().onAuthStateChanged(function(user) {
         var $newElement = $("<li>", {id: "user"});
         if(user) {
             //Someone is logged in.
@@ -39,6 +38,6 @@ function generateUserLoginElement() {
             $newElement.html("<a href=\"#\">Login</a>");
         }
         $def.resolve($newElement);
-    //});
+    });
     return $def;
 }
