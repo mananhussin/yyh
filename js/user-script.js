@@ -16,7 +16,10 @@ function generateUserLoginElement() {
             //We want them to be able to log in.
             $newElement.click(function() {
                 var loginProvider = new firebase.auth.GoogleAuthProvider();
-                firebase.auth().signInWithPopup(loginProvider);
+                firebase.auth().signInWithPopup(loginProvider).then(function(x) {
+                    //x= auth token,, who cares rn
+                    location.reload();
+                });;
             });
             
             $newElement.html("<a href=\"#\">Login</a>");
