@@ -26,4 +26,12 @@ $(document).ready(function() {
         $("#reply-wrap").slideToggle(400);
     });
     
+    
+    //Add reply submit functionality
+    
+    $("#reply-form").submit(function (e) {
+        var txt = $("textarea[name='reply']").val();
+        submitReplyToPost(postLocation, txt, "TempUser");
+        e.preventDefault();
+    });
 });

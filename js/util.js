@@ -191,3 +191,102 @@ function createRepliesFromPostReplyData(data) {
     }
     return dataAsReplies;
 }
+
+
+
+//Find illegal characters in string. This is mainly to be more safe when allowing uses to create posts. (Some users could add <input id="...".>> to fool people)
+//This method returns the indicies of each illegal character.
+function findIllegalChars(str) {
+    var illegalChars = ['<','>'];
+    var illegalIndicies = [];
+    //As far as I can tell, these are the only illegal characters we need.
+    for(var i = 0; i < str.length; i++) {
+        for(var x = 0; x < illegalChars.length; x++) {
+            if(str.charAt(i) === illegalChars[x]) {
+                illegalIndicies.push(i);
+            }
+        }
+    }
+    return illegalIndicies;
+}
+
+
+
+function getIllegalReplacement(char) {
+    var illegalChars = ['<','>'];
+    var safeMatchups = ["&lt;","&gt;"];
+    for(var i = 0; i < illegalChars.length; i++) {
+        //This is so bad but i cant remember how to make keys / values
+        if(char === illegalChars[i]) {
+            return safeMatchups[i];
+        }
+    }
+    return char;
+}
+
+function stringReplaceAt(str, index, replacement) {
+    return str.substring(0,index) + replacement + str.substring(index+1, str.length);
+}
+
+function addLineBreaks(str) {
+    var newLines = str.split("\n");
+    if(newLines.length == 1)
+        return str;
+    var newStr = newLines[0]+"<br/>";
+    for (var i = 1; i < newLines.length-1; i++) {
+    newStr+=newLines[i];
+    newStr+="<br/>";
+    }
+    newStr+=newLines[newLines.length-1];
+    return newStr;
+}
+
+//This replaces illegal characters with the html short cuts and line breaks with <br>
+function convertRawTextToSafeText(str) {
+    var toChange = findIllegalChars(str);
+    for(var i = toChange.length-1; i >= 0; i--) {
+    		$("#t").append(i + "  " + toChange[i]);
+        var badChar = str.charAt(toChange[i]);
+        var newChar = getIllegalReplacement(badChar);
+        str = stringReplaceAt(str, toChange[i], newChar);
+    }
+    str = addLineBreaks(str);
+    return str;
+}
+
+
+function getCurrentDateFormatted() {
+    var dateStr = "";
+    var date = new Date();
+    dateStr+=((date.getMonth()+1 < 10) ? "0"+(date.getMonth()+1):(date.getMonth()+1));
+    dateStr+=((date.getDate()+1 < 10) ? "0"+date.getDate():date.getDate());
+    dateStr+=(date.getFullYear()-2000);
+    dateStr+=date.getHours();
+    dateStr+=date.getMinutes();
+    return dateStr;
+}
+
+
+
+function submitReplyToPost(postLocation, text, author) {
+    text = convertRawTextToSafeText(text);
+    retriveDataPromiseAtLocation(postLocation).done(function (x) {
+        var tempPost = createPostFromPostData(x);
+        var reply = new PostReply(author, text, getCurrentDateFormatted());
+        tempPost.replies.push(reply);
+        submitDataToLocation(postLocation+"/replies/"+(tempPost.replies.length-1), reply);
+        location.reload(true);
+        //Reload page
+        //writePostToLocation(postLocation, tempPost);
+    });
+}
+
+function submitDataToLocation(location, data) {
+    firebase.database().ref(location).set(data);
+}
+
+//Careful, this will override.
+function writePostToLocation(postLocation, post) {
+    firebase.database().ref(postLocation).set(post);
+}
+
