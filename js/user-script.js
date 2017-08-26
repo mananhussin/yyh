@@ -30,8 +30,19 @@ function generateUserLoginElement() {
             $newElement.click(function() {
                 var loginProvider = new firebase.auth.GoogleAuthProvider();
                 firebase.auth().signInWithPopup(loginProvider).then(function(x) {
-                    //x= auth token,, who cares rn
-                    location.reload();
+                    var user = x.user;
+                    var userId = user.uid;
+                    retriveDataPromiseAtLocation("registeredUsers").done(function(result) {
+                        var userLoc = $.inArray(userId, result);
+                        if(userLoc == -1) {
+                            //User doesn't exist, ask to change name
+                            var newName = prompt("Enter your username for this site (You can't change it):");
+                            
+                        } else {
+                            //User exists...normal login.
+                        }
+                    });
+                    //location.reload();
                 });;
             });
             
@@ -40,4 +51,23 @@ function generateUserLoginElement() {
         $def.resolve($newElement);
     });
     return $def;
+}
+
+//This is included because not all pages have Util.js
+
+/*
+    A deferred function which calls the firebase database at the given location. 
+    Retrieves the data from the location and returns it. It can be accessed through
+    retrieveData..Location(loc).done(func (data) {}); where (data) is the data from the location.
+    The data can either be an array, string, or anything else depending on the location
+*/
+function retriveDataPromiseAtLocation(location) {
+    
+    var $deferred = new $.Deferred();
+    
+    firebase.database().ref(location).once("value").then(function(data) {
+        dataToReturn = data.val();
+        $deferred.resolve(dataToReturn);
+    });
+    return $deferred.promise();
 }
