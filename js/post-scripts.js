@@ -31,7 +31,14 @@ $(document).ready(function() {
     
     $("#reply-form").submit(function (e) {
         var txt = $("textarea[name='reply']").val();
-        submitReplyToPost(postLocation, txt, "TempUser");
+        var currentUser = firebase.auth().currentUser;
+        var name = "-- None --";
+        if(currentUser) {
+            name = currentUser.displayName;
+        } else {
+            
+        }
+        submitReplyToPost(postLocation, txt, name);
         e.preventDefault();
     });
 });
