@@ -244,10 +244,11 @@ a:hover {
 
 .dropdown div.drop-content {
     display:none;
-    
+    position:relative;
 }
 
 .dropdown:hover div.drop-content {
     display:block;
+    position: relative;
     z-index: 1;
 }
