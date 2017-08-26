@@ -1,15 +1,16 @@
 $(document).ready(function() {
     generateUserLoginElement().then(function(newElement) {
         $(".main-nav").children('ul').append(newElement);
-    });
-    
-    $("#sign-out").click(function(x) {
+        $("#sign-out").click(function(x) {
         firebase.auth().signOut().then(function() {
             location.reload();
         }).catch(function(err) {
             console.log(err);
         });
     });
+    });
+    
+    
 });
 
 function generateUserLoginElement() {
