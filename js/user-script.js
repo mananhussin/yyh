@@ -9,7 +9,7 @@ $(document).ready(function() {
                 console.log(err);
             });
         });
-        $("#change-user").click(function(x) {
+/*        $("#change-user").click(function(x) {
             var newName = prompt("Type your new username");
             newName = convertRawTextToSafeText(newName);
             firebase.auth().onAuthStateChanged(function(user) {
@@ -23,7 +23,7 @@ $(document).ready(function() {
                     });
                 }
             });
-        });
+        });*/
     });
     
     
@@ -37,7 +37,7 @@ function generateUserLoginElement() {
             //Someone is logged in.
             var name = user.displayName;
             $newElement = $("<div>", {id:"user","class":"dropdown"});
-            var newhtml = "<li><a href=\"#\">" + name + "</a></li><div class=\"dropdown-items\"><a id=\"change-user\" href=\"#\">Change Username</a><br><br><a id=\"sign-out\" href=\"#\">Sign Out</a></div>";
+            var newhtml = "<li><a href=\"#\">" + name + "</a></li><div class=\"dropdown-items\"><a id=\"change-user\" href=\"#\">Profile</a><br><br><a id=\"sign-out\" href=\"#\">Sign Out</a></div>";
             $newElement.html(newhtml);
             //alert($newElement.html());
         } else {
