@@ -64,6 +64,7 @@ function generateUserLoginElement() {
                             });
                         } else {
                             //User exists...normal login.
+                            location.reload();
                         }
                     });
                     //location.reload();
