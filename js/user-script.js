@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    var newElement = generateUserLoginElement();
-    $(".main-nav").children('ul').append(newElement);
+    generateUserLoginElement().then(function(newElement) {
+        $(".main-nav").children('ul').append(newElement);
+    });
 });
 
 function generateUserLoginElement() {
@@ -19,6 +20,7 @@ function generateUserLoginElement() {
             });
         }
         $newElement.html("<a href=\"#\">Login</a>");
+        $def.resolve($newElement);
     });
     return $def;
 }
