@@ -11,6 +11,7 @@ function generateUserLoginElement() {
         if(user) {
             //Someone is logged in.
             var name = user.displayName;
+            var newhtml = "<div class=\"dropdown\"><a href=\"#\">" + name + "</a><div id=\"drop-content\"><ul><li>Test</li></ul></div></div>";
             $newElement.html("<a href=\"#\">" + name + "</a>");
         } else {
             //We want them to be able to log in.

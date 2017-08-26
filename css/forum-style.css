@@ -487,3 +487,20 @@ input:focus, textarea:focus {
   border-color: red;
   box-shadow: 0px 1px 8px red;
 }
+
+
+/* Drop down */
+
+.dropdown {
+    
+}
+
+.dropdown>drop-content {
+    display:none;
+    
+}
+
+.dropdown:hover>drop-content {
+    display:block;
+    z-index: 1;
+}
