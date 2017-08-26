@@ -242,12 +242,12 @@ a:hover {
     
 }
 
-.dropdown>drop-content {
+.dropdown>.drop-content {
     display:none;
     
 }
 
-.dropdown:hover>drop-content {
+.dropdown:hover>.drop-content {
     display:block;
     z-index: 1;
 }
