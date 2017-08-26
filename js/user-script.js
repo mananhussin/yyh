@@ -18,8 +18,9 @@ function generateUserLoginElement() {
                 var loginProvider = new firebase.auth.GoogleAuthProvider();
                 firebase.auth().signInWithPopup(loginProvider);
             });
+            
+            $newElement.html("<a href=\"#\">Login</a>");
         }
-        $newElement.html("<a href=\"#\">Login</a>");
         $def.resolve($newElement);
     });
     return $def;
