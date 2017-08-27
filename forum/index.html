@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC-3ggC6b_OTBpvG4lBTL1xHSErZ2N1d9w",
+            authDomain: "tgl-base.firebaseapp.com",
+            databaseURL: "https://tgl-base.firebaseio.com",
+            projectId: "tgl-base",
+            storageBucket: "tgl-base.appspot.com",
+            messagingSenderId: "382417513275"
+          };
+          firebase.initializeApp(config);
+        </script>
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Custom script -->
@@ -186,6 +200,7 @@
             <p>Copyright © 2017 The Gaming Lounge</p>
             <a href="#">Back to top »</a>
         </footer>
+        <script src="../js/user-script.js"></script>
 
     </body>
 </html>
