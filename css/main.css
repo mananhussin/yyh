@@ -1,6 +1,5 @@
-/* Main Css File */
-
-/* General */
+/**** Main Css File ****/
+/**** General ****/
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 
 body {
   background-color: #fff;
-  font-family: Helvetica;
+  font-family: Arial;
   font-weight: normal;
 }
 
@@ -16,8 +15,16 @@ h1 {
   font-weight: normal;
 }
 
+::selection, ::-moz-selection {
+  background: rgb(255, 57, 57);
+}
+
+::-moz-selection {
+  background: rgb(255, 57, 57);
+}
+
 .title /* h1 */ {
-  font-family: 'Lobster', cursive;
+  font-family: 'Archivo Black';
 }
 
 a:hover {
@@ -39,11 +46,11 @@ a:hover {
 	}
 }
 
-/* Header & Navigation */
+/**** Header & Navigation ****/
 .main-header {
   width: 100%;
   background-color: #202020;
-  border-bottom: 2px groove red;
+  border-bottom: 2px solid red;
 }
 
 .main-header::after {
@@ -60,14 +67,17 @@ a:hover {
 .logo {
   color: white;
   float: left;
-  font-size: 2em;
-  line-height: 60px;
-  font-family: 'Lobster', cursive;
+  font-size: 2.4em;
+  line-height: 80px;
+  font-family: "Archivo Black";
   text-decoration: none;
+  transition: 250ms;
 }
 
 .main-nav {
   float: right;
+  background-color: #2b2b2b;
+  border-radius: 5px;
 }
 
 .main-nav ul li {
@@ -75,12 +85,13 @@ a:hover {
 }
 
 .main-nav ul li a {
-  padding: 0 20px;
+  padding: 0 25px;
   color: white;
-  line-height: 60px;
-  font-size: 1em;
+  line-height: 80px;
+  font-size: 1.2em;
   text-decoration: none;
   font-weight: bold;
+  transition: 250ms;
 }
 
 .main-nav li:hover a {
@@ -88,7 +99,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* NOTE: Binks' dropdown animation: */
+/**** Binks' dropdown animation: ****/
 .dropdown {
   position: relative;
   display: inline-block;
@@ -124,13 +135,13 @@ a:hover {
   color: red;
 }
 
-/* Splash/Main Heading */
+/**** Splash/Main Heading ****/
 .main-heading {
-  background-image: url('../img/splash.jpg');
+  background-image: url('../img/kha.jpg');
   background-size: cover;
   background-position: center;
   height: 75vh;
-  border-bottom: 3px groove red;
+  border-bottom: 3px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,9 +152,9 @@ a:hover {
 
 .main-heading h1 {
   color: white;
-  text-shadow: 2px 2px 3px red;
+  text-shadow: 4px 4px 2px black;
   font-size: 7em;
-  font-family: 'Lobster', cursive;
+  font-family: "Archivo Black";
   font-weight: normal;
 }
 
@@ -151,32 +162,35 @@ a:hover {
   color: white;
   font-size: 2em;
   padding: 15px 0 35px 0;
-  font-family: 'Lobster', cursive;
+  font-family: "Archivo Black";
+  text-shadow: 4px 4px 2px black;
 }
 
 .main-heading a {
   color: white;
   border: 1px solid red;
+  background-color: #202020;
   border-radius: 5px;
   padding: 10px 20px;
   text-decoration: none;
-  text-shadow: 1px 1px 10px #f3f3f3;
+  text-shadow: 2px 2px 1px black;
   text-decoration: none;
-  font-family: 'Lobster', cursive;
-  font-size: 1.2em;
+  font-family: "Archivo Black";
+  font-size: 1.4em;
+  transition: 250ms;
 }
 
 .main-heading a:hover {
-  color: red;
+  color: limegreen;
 }
 
-/* Main Content */
+/**** Main Content ****/
 .main-content {
   width: 95%;
   margin: 45px auto;
   background-color: #202020;
-  border: 2px groove red;
-  border-radius: 15px;
+  border: 2px solid red;
+  border-radius: 5px;
   text-align: center;
   color: white;
   box-shadow: 0px 5px 10px #888888;
@@ -199,14 +213,14 @@ a:hover {
   text-shadow: 1px 1px 2px red;
 }
 
-/* Secondary Content */
+/**** Secondary Content ****/
 .secondary-content {
   width: 95%;
   height: 250px;
   margin: 45px auto;
   background-color: #202020;
-  border: 2px groove red;
-  border-radius: 15px;
+  border: 2px solid red;
+  border-radius: 5px;
   color: white;
   background-image: url("../img/zed.png");
   background-repeat: no-repeat;
@@ -249,13 +263,13 @@ a:hover {
   padding-top: 5px;
 }
 
-/* Footer */
+/**** Footer ****/
 .main-footer {
   width: 100%;
   display: inline-block;
   text-align: center;
   background-color: #202020;
-  border-top: 2px groove red;
+  border-top: 2px solid red;
 }
 
 .main-footer p {
@@ -264,10 +278,9 @@ a:hover {
   font-style: italic;
 }
 
-
 .main-footer a {
   color: red;
   display: inline-block;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
