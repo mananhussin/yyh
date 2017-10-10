@@ -1,206 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyC-3ggC6b_OTBpvG4lBTL1xHSErZ2N1d9w",
-            authDomain: "tgl-base.firebaseapp.com",
-            databaseURL: "https://tgl-base.firebaseio.com",
-            projectId: "tgl-base",
-            storageBucket: "tgl-base.appspot.com",
-            messagingSenderId: "382417513275"
-          };
-          firebase.initializeApp(config);
-        </script>
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Custom script -->
-        <script src="../js/forum-scripts.js"></script>
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <!-- Main CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/forum-style.css">
-        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
-    </head>
-    <body>
-        <!-- maybe a navbar or something, not sure -->
-        <header class="main-header">
-            <div class="header-container">
-                <a class="logo" href="../">The Gaming Lounge</a>
-                    <!-- Logo -->
-                    <!-- <img src="" alt="logo" width=""> -->
-                    <nav class="main-nav">
-                        <ul>
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="">Forum</a></li>
-                            <li><a href="../contact/index.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-        </header>
-        <!-- Container -->
-        <div class="container-fluid">
-            <div class="row splash">
-                <h1>The Gaming Lounge</h1>
-            </div>
-            <div class="row">
-                
-                <!-- Kind of cheating but for some reason the col-md-offset wasn't working or really I wasn't using it right :// this is my solution. Creates a slightly centering column which doesnt exist on smaller screens-->
-                <div class="col-md-2"></div>
-                <div class="col-md-8 col-md-offset-2 col-xs-12">
-                
-                    <!-- Put content here -->
-                    
-                    <!-- <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida finibus fringilla. Ut sed enim consequat, ultricies orci ultricies, aliquet diam. Cras in est accumsan, scelerisque lorem tincidunt, vestibulum ante. Nullam semper, velit vel vehicula pretium, velit urna dapibus felis, vel interdum ligula nibh eu massa. Morbi convallis tincidunt egestas. Donec consectetur magna at augue consectetur iaculis. Nulla eu mi risus. </p>
-                    </div> -->
-                    <!-- Forum groups below -->
-                    
-                    <div class="forum-group">
-                      <div class="group-head">General Discussion:</div>
-                        <div class="group-wrap">
-                            <div class="group-item">
-                                <a class="group-item-title" href="./server%20forums/server%20questions/">Server Questions</a>
-                                <p class="lead">Ask any question you have about the server</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./server%20forums/server%20discussion/">Server Discussion</a>
-                                <p class="lead">Post anything you want to talk about here</p>
-                            </div>
-                            <div class="group-item last-item">
-                                <a class="group-item-title" href="./server%20forums/introductions/">Introductions</a>
-                                <p class="lead">Introduce yourself to everyone</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="forum-group">
-                        <div class="group-head">Video Games:</div>
-                        <div class="group-wrap">
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/overwatch/">Overwatch</a>
-                                <p class="lead">Some general talk about overwatch</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/league/">League</a>
-                                <p class="lead">Discuss Strats and show off</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/dota/">DoTA</a>
-                                <p class="lead">Show how much cooler a game than league DoTA is</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/osu!/">osu!</a>
-                                <p class="lead">Share beatmaps and skins</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/minecraft/">Minecraft</a>
-                                <p class="lead">Quality game, talk nice</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/path%20of%20exile/">Path of Exile</a>
-                                <p class="lead">Never heard of it</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/rocket%20league/">Rocket League</a>
-                                <p class="lead">Share videos and find other players</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/counter-strike/">Counter Strike</a>
-                                <p class="lead">AWP</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/quake/">Quake</a>
-                                <p class="lead">Boom</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/starcraft/">Starcraft II</a>
-                                <p class="lead">Intense</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/unturned/">Unturned</a>
-                                <p class="lead">Can't Describe</p>
-                            </div>
-                            <div class="group-item">
-                                <a class="group-item-title" href="./gaming%20forums/rust/">Rust</a>
-                                <p class="lead">Talk with others</p>
-                            </div>
-                            <div class="group-item last-item">
-                                <a class="group-item-title" href="./gaming%20forums/black%20squads/">Black Squads</a>
-                                <p class="lead">Bang Bang</p>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="forum-group">
-                        <div class="group-head">Creative:</div>
-                        <div class="group-wrap">
-                        <div class="group-item">
-                            <a class="group-item-title" href="./development%20forums/coding%20discussion/">Coding Discussion</a>
-                            <p class="lead">Ask any question or post a guide for any coding projects here</p>
-                        </div>
-                        <div class="group-item">
-                            <a class="group-item-title" href="./development%20forums/photoshop%20discussion/">Photoshop Discussion</a>
-                            <p class="lead">Share projects and help with others</p>
-                        </div>
-                        <div class="group-item last-item">
-                            <a class="group-item-title" href="./development%20forums/video%20discussion/">Video Discussion</a>
-                            <p class="lead">Show off videos you've made and help people with theirs</p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New forum-group -->
-                
-                
-                <!-- This technically doesn't need to be here, but I put it here to stay consistent -->
-                <div class="col-md-2">
-                    <div class="recent-posts">
-                        <center><span class="important">Recent Posts</span></center>
-                        <hr />
-                        <div class="scroll-container">
-                            <!-- Have this update later, probably using angularJs?? -->
-                            <div class="post">
-                                <div class="title"><a href="#">Why DoTA is better than League</a></div>
-                                
-                                <div class="sub-forum">written in <a href="#">DoTA</a></div>
-                                <div class="author">by xDest</div>
-                            </div>
-                            <div class="post">
-                                <div class="title"><a href="#">How to be good at overwatch</a></div>
-                                
-                                <div class="sub-forum">written in <a href="#">Overwatch</a></div>
-                                <div class="author">by TheLegend27</div>
-                            </div>
-                            <div class="post">
-                                <div class="title"><a href="#">Ban xcoolgamer37x</a></div>
-                                
-                                <div class="sub-forum">written in <a href="#">Server Discussion</a></div>
-                                <div class="author">by WellRespectedMember</div>
-                            </div>
-                            <div class="post">
-                                <div class="title"><a href="#">can i friend to server invit?</a></div>
-                                
-                                <div class="sub-forum">written in <a href="#">Server Questions</a></div>
-                                <div class="author">by xcoolgamer37x</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <footer class="main-footer">
-            <p>Copyright © 2017 The Gaming Lounge</p>
-            <a href="#">Back to top »</a>
-        </footer>
-        <script src="../js/user-script.js"></script>
+<head>
+  <title>The Gaming Lounge | Forum</title>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC-3ggC6b_OTBpvG4lBTL1xHSErZ2N1d9w",
+      authDomain: "tgl-base.firebaseapp.com",
+      databaseURL: "https://tgl-base.firebaseio.com",
+      projectId: "tgl-base",
+      storageBucket: "tgl-base.appspot.com",
+      messagingSenderId: "382417513275"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Custom script -->
+  <script src="../js/forum-scripts.js"></script>
+  <!-- Main CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/forum-style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/icon3.png">
+</head>
 
-    </body>
+<body class="fade-in">
+  <header class="main-header">
+    <div class="header-container">
+      <a class="logo" href="../index.html">The Gaming Lounge</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a>
+          </li>
+          <li><a href="../about/index.html">About</a>
+          </li>
+          <li><a href="#">Forum</a>
+          </li>
+          <li><a href="../contact/index.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main-heading">
+    <h1>TGL Forums</h1>
+    <p>Have a thought or idea? Post it down below to the community!</p>
+    <a href="http://www.discord.gg/0nimFZPsWJ1AlYlt">Connect Now</a>
+  </div>
+
+  <footer class="main-footer">
+    <a href="#">Back to top &#187;</a>
+    <p>Copyright &#64; 2017 The Gaming Lounge</p>
+  </footer>
+
+  <script src="js/user-script.js"></script>
+</body>
 </html>

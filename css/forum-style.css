@@ -1,526 +1,177 @@
-
+/**** Forum Css File ****/
+/**** General ****/
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: #fff;
-  font-family: Helvetica;
+	background-color: #fff;
+	font-family: Arial;
+	font-weight: normal;
 }
 
-ul {
-    margin-bottom: 0;
+h1 {
+	font-weight: normal;
 }
 
-/* Forum styles */
-
-.forum-group {
-    background-color:#202020;
-    border-style: solid;
-    border-width: 2px;
-    border-color:red;
-    border-radius: 10px;
-    color:black;
-    font-size:18px;
-    margin: 25px 0px 25px 0px;
-    transition: 500ms;
+::selection, ::-moz-selection {
+	background: rgb(255, 57, 57);
 }
 
-
-.forum-group .group-head {
-    width:100%;
-    font-family: 'Lobster',cursive;
-    border-radius: 10px;
-    box-shadow: 0px 4px 1px red;
-    text-shadow: 1px 1px 4px red;
-    background-color:#202020;
-    color:white;
-    font-size:32px;
-    padding: 15px;
-    transition:250ms;
+::-moz-selection {
+	background: rgb(255, 57, 57);
 }
 
-.forum-group .group-head sub {
-  font-family: Helvetica;
-  text-decoration: none;
-  border-radius: 0px;
-  box-shadow: none;
-  text-shadow: none;
-  background-color: none;
-  color:white;
-  font-size:16px;
-  padding: 0;
+.title /* h1 */ {
+	font-family: 'Archivo Black';
 }
 
-.forum-group .group-item {
-    border-bottom-width: 1px;
-    border-bottom-color: black;
-    border-bottom-style: solid;
-    color:white;
-    border-radius: 0;
-    padding-left: 25px;
-    padding-right: 25px;
+a:hover {
+	color: red;
+	text-decoration: none;
 }
 
-a.group-item-title {
-    width:100%;
-    font-size:24px;
+.fade-in {
+		-webkit-animation: fadeIn 750ms;
 }
 
-.forum-group .group-item.last-item {
-    border-radius:10px;
-    border-bottom-style: hidden;
-    padding-bottom: 5px;
-}
-
-.forum-group a {
-    color:white;
-    font-weight: 600;
-    transition: 250ms;
-}
-
-.forum-group a:hover {
-    transition: 250ms;
-    font-size: 28px;
-    text-decoration: none;
-    color: red;
-    text-shadow: 1px 1px 4px white;
-}
-
-.group-wrap {
-    display:none;
-}
-
-.forum-group .group-head.group-head-hover {
-    font-size:42px;
-    transition: 250ms;
-    color:red;
-    text-shadow: 2px 2px 2px white;
-}
-
-/*    Recent Posts        */
-
-.recent-posts {
-    width:100%;
-    margin-top:10px;
-    padding:20px;
-    border-style:groove;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color:red;
-    background-color: #202020;
-    height:400px;
-    color: white;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.recent-posts .scroll-container {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    height: 300px;
-    padding:10px;
-    border-style: hidden;
-}
-
-.important {
-    font-size: 2em;
-    color:white;
-    font-family: 'Lobster',cursive;
-    text-shadow: 2px 2px 4px red;
-    font-weight: 700px;
-}
-
-.recent-posts .post {
-    display:block;
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-.recent-posts .post a{
-    text-decoration: none;
-    color:lightgrey;
-}
-
-.recent-posts .post a:hover{
-    text-decoration: none;
-    color:red;
-}
-
-.recent-posts .post .title {
-    font-size:20px;
-}
-
-hr {
-    border-color:white;
+@keyframes fadeIn {
+		from {
+				opacity: 0;
+		}
+		
+		to {
+				opacity: 1;
+		}
 }
 
 
-/* Holy shit this part took so long because I forgot the "px" at the end of max-width:1250px */
 
-@media screen and (min-width:1251px) {
-    .recent-posts .scroll-container {
-        height: 300px;
-    }
-}
-
-@media screen and (max-width:1250px) {
-    .recent-posts .scroll-container {
-        height:260px;
-    }
-}
-
-
-/* Post List */
-
-.post-list-title {
-    font-size: 28px;
-    border-bottom: 1px dashed gray;
-    color: white;
-    font-weight: 600;
-    text-shadow: 1px 2px 2px red;
-    transition: 250ms;
-}
-
-.post-list-title a {
-    /* Nada */
-}
-
-.post-list-title a:hover {
-    transition: 250ms;
-    color: red;
-    text-shadow: 1px 2px 2px white;
-}
-
-.post-list-author { 
-    display: inline-block;
-    padding: 10px;
-}
-
-.post-list-date {
-    display: inline-block;
-    padding: 10px;
-}
-
-.post-list-replies {
-    display: inline-block;
-    padding: 10px;
-}
-
-
-/* Actual Posts, try not to confuse */
-
-.post-header {
-    text-align: left;
-    color: white;
-    font-size: 28px;
-    border-bottom: 2px solid red;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0px 2px 2px red;
-}
-
-.post-title {
-    font-size: 48px;
-    border-bottom: 1px solid white;
-    padding-left: 15px;
-    color: white;
-    display: block;
-    font-weight: 600;
-    text-shadow: 1px 2px 2px red;
-}
-
-.post-author {
-    display: inline-block;
-    padding: 10px 15px 10px 15px;
-}
-
-.post-date {
-    display: inline-block;
-    padding: 25px;
-    padding: 10px 5px 10px 15px;
-}
-
-.post-body {
-    text-align: left;
-    padding: 15px;
-    font-size: 22px;
-    font-family:inherit;
-    padding-left: 25px;
-}
-
-
-/* Posts --> Replies */
-.post-reply-wrap {
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-    text-align: left;
-    font-size: 18px;
-    padding: 15px 25px 15px 25px;
-}
-
-.post-reply-wrap.last-reply {
-    border-bottom-width: 0px;
-}
-
-.post-reply-body {
-    /* nada so far */
-}
-
-.post-reply-footer {
-    border-top: 1px dashed gray;
-    font-size:14px;
-    padding: 0;
-    
-}
-
-.post-reply-author {
-    display: inline-block;
-    margin-right: 4px;
-    
-}
-
-.post-reply-date {
-    display: inline-block;
-}
-
-/*         Footer         */
-
-.main-footer {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  background-color: #202020;
-  border-top: 2px groove red;
-}
-
-.main-footer p {
-  color: white;
-  margin: 10px;
-  font-style: italic;
-}
-
-
-.main-footer a {
-  color: red;
-  display: inline-block;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-
-/* Header / Nav */
-
+/**** Header & Navigation ****/
 .main-header {
-  width: 100%;
-  background-color: #202020;
-  border-bottom: 2px groove red;
+	width: 100%;
+	background-color: #202020;
+	border-bottom: 2px solid red;
 }
 
 .main-header::after {
-  content: "";
-  clear: both;
-  display: block;
+	content: "";
+	clear: both;
+	display: block;
 }
 
 .header-container {
-  width: 90%;
-  margin: 0 auto;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .logo {
-  color: white;
-  float: left;
-  font-size: 2em;
-  line-height: 60px;
-  font-family: 'Lobster', cursive;
-  text-decoration: none;
+	color: white;
+	float: left;
+	font-size: 2.4em;
+	line-height: 80px;
+	font-family: "Archivo Black";
+	text-decoration: none;
+	transition: 250ms;
 }
 
 .main-nav {
-  float: right;
+	float: right;
+	background-color: #2b2b2b;
+	border-radius: 5px;
 }
 
 .main-nav ul li {
-  display: inline-block;
+	display: inline-block;
 }
 
 .main-nav ul li a {
-  padding: 0 20px;
-  color: white;
-  line-height: 60px;
-  font-size: 1em;
-  text-decoration: none;
-  font-weight: bold;
+	padding: 0 25px;
+	color: white;
+	line-height: 80px;
+	font-size: 1.2em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 250ms;
 }
 
 .main-nav li:hover a {
-  color: red;
-  text-decoration: none;    
-}
-
-
-a:hover {
-  color: red;
-  text-decoration: none;
-}
-
-.splash {
-  background-image: url('../img/splash.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  border-bottom: 3px groove red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0px 5px 10px #888888;
-}
-
-.splash h1 {
-  color: white;
-  text-shadow: 2px 2px 3px red;
-  font-size: 7em;
-  font-family: 'Lobster', cursive;
-}
-
-.col-md-2 {
-  height: 10%;
-}
-  
-
-.content {
-    border: 2px solid red;
-    background-color: #202020;
-    color:white;
-    font-family: 'Helvetica';
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    border-radius: 5px;
-    margin: 10px 0px 5px 0px;
-}
-
-.content.no-pad {
-    padding: 0;
+	color: red;
+	text-decoration: none;
 }
 
 
 
-/* Reply */
-#reply-wrap {
-    display:none;
+/**** Splash/Main Heading ****/
+.main-heading {
+	background-image: url('../img/kha.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 75vh;
+	border-bottom: 3px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0px 5px 10px #888888;
 }
 
-.reply {
-    border-radius: 10px;
-    border-color:red;
-    font-family: "Helvetica";
-    color:white;
-    text-shadow: 2px 2px 2px red;
-    background-color: #202020;
-    font-size: 24px;
-    padding:4px 9px 5px 8px;
+.main-heading h1 {
+	color: white;
+	text-shadow: 4px 4px 2px black;
+	font-size: 7em;
+	font-family: "Archivo Black";
+	font-weight: normal;
 }
 
-.reply:focus {
-    outline:0;
+.main-heading p {
+	color: white;
+	font-size: 2em;
+	padding: 15px 0 35px 0;
+	font-family: "Archivo Black";
+	text-shadow: 4px 4px 2px black;
 }
 
-/* NOTE: Binks' reply project: */
-#submit-button {
-  margin: 0 auto;
-  margin-bottom: 15px;
-  background-color: red;
-  color: white;
-  border-color: black;
-  border-bottom: 6px solid black;
-  border-radius: 10px;
-  font-size: 1.1em;
-  font-family: 'Lobster', cursive;
-  font-weight: normal;
-  width: 33%;
-  display: block;
+.main-heading a {
+	color: white;
+	border: 1px solid red;
+	background-color: #202020;
+	border-radius: 5px;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-shadow: 2px 2px 1px black;
+	text-decoration: none;
+	font-family: "Archivo Black";
+	font-size: 1.4em;
+	transition: 250ms;
 }
 
-#submit-button:hover {
-  background-color: #c80000;
-}
-
-#submit-button:active {
-  transform: translateY(6px);
-}
-
-#submit-button:focus {
-  box-shadow: none;
-  border-color: black;
-}
-
-label {
-  display: block;
-  margin-bottom: -10px;
-}
-
-textarea {
-  box-sizing: border-box;
-  margin: 15px auto;
-  display: block;
-  width: 75%;
-}
-
-input, textarea {
-  box-sizing: border-box;
-  border: 3px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  font-family: Helvetica;
-  transition: 300ms;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: red;
-  box-shadow: 0px 1px 8px red;
+.main-heading a:hover {
+	color: limegreen;
 }
 
 
-/* NOTE: Binks' dropdown animation: */
-.dropdown {
-  position: relative;
-  display: inline-block;
+
+/**** Footer ****/
+.main-footer {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	background-color: #202020;
+	border-top: 2px solid red;
 }
 
-.dropdown-items {
-  display: none;
-  position: absolute;
-  background-color: #202020;
-  border: 1px solid red;
-  border-top: none;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-  text-decoration: none;
-  color: white;
-  text-align: left;
+.main-footer p {
+	color: white;
+	margin: 10px;
+	font-style: italic;
 }
 
-.dropdown-items a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.dropdown-items a:hover {
-  color: red;
-}
-
-.dropdown:hover .dropdown-items {
-  display: block;
-  color: red;
+.main-footer a {
+	color: red;
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 10px;
 }
