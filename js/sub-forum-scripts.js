@@ -47,5 +47,6 @@ $(document).ready(function () {
         }
         //Show 10 most recent posts, insert in **ALL** divs (there should only be one) with the forum-group class.
         arrangePostsOnPageByMostRecent(posts, 10, $(".forum-group"), promiseLocation);
-    });
+    })
+    
 });

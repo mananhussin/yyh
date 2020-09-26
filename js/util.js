@@ -169,6 +169,18 @@ function insertHTMLToElement(newHTML, $location) {
     $location.html(newHTML);
 }
 
+//This function inserts the provided html to the given element, just before the specified child index. Untested.
+function insertHTMLinElement(html, $location, childIndex) {
+    if($location.length < childIndex) {
+        childIndex = $location.length+1;
+    }
+    if(childIndex == 0) {
+        $location.prepend(html);
+    } else {
+        $location.children().eq(childIndex-1).after(html);
+    }
+}
+
 function createPostFromPostData(data) {
     var newPost = new Post(data.title, data.author, data.date, [], data.body);
     try {
